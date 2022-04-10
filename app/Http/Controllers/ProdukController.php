@@ -12,10 +12,27 @@ class ProdukController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $produk = Produk::all();
+    public function index(Request $request)
+    {   
+        if($request->q)
+        {
+        $produk = Produk::join('kategori', 'produk.kategori_id','=', 'kategori.id')
+        ->where('nama_produk', 'LIKE', '%'.$request->q.'%')
+        ->orWhere('harga', 'LIKE', '%'.$request->q.'%')
+        ->orWhere('status', 'LIKE', '%'.$request->q.'%')
+        ->orWhere('kategori_id', 'LIKE', '%'.$request->q.'%')
+        ->orWhere('berat', 'LIKE', '%'.$request->q.'%')
+        ->orWhere('deskripsi', 'LIKE', '%'.$request->q.'%')
+        ->get()
+        ;
+        // dd($produk);
         return response()->json($produk);
+        }
+        else{
+        $produk = Produk::join('kategori', 'kategori.id', '=', 'produk.kategori_id')
+        ->get(['produk.*','kategori.nama_kategori']);
+        return response()->json($produk);
+        }
     }
 
     /**
@@ -48,7 +65,7 @@ class ProdukController extends Controller
      */
     public function show($id)
     {
-        $kategori = Kategori::find($id);
+        $kategori = Produk::find($id);
         return response()->json($kategori);
     }
 
