@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[17],{
 
-/***/ "../coreui/src/views/base/ProgressBars.vue":
-/*!*************************************************!*\
-  !*** ../coreui/src/views/base/ProgressBars.vue ***!
-  \*************************************************/
+/***/ "../coreui/src/views/base/Navbars.vue":
+/*!********************************************!*\
+  !*** ../coreui/src/views/base/Navbars.vue ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ProgressBars_vue_vue_type_template_id_6bded8de___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProgressBars.vue?vue&type=template&id=6bded8de& */ "../coreui/src/views/base/ProgressBars.vue?vue&type=template&id=6bded8de&");
-/* harmony import */ var _ProgressBars_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProgressBars.vue?vue&type=script&lang=js& */ "../coreui/src/views/base/ProgressBars.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Navbars_vue_vue_type_template_id_e28a89e2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Navbars.vue?vue&type=template&id=e28a89e2& */ "../coreui/src/views/base/Navbars.vue?vue&type=template&id=e28a89e2&");
+/* harmony import */ var _Navbars_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbars.vue?vue&type=script&lang=js& */ "../coreui/src/views/base/Navbars.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../laravel/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _ProgressBars_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ProgressBars_vue_vue_type_template_id_6bded8de___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _ProgressBars_vue_vue_type_template_id_6bded8de___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Navbars_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Navbars_vue_vue_type_template_id_e28a89e2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Navbars_vue_vue_type_template_id_e28a89e2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,91 +32,52 @@ var component = Object(_laravel_node_modules_vue_loader_lib_runtime_componentNor
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/base/ProgressBars.vue"
+component.options.__file = "coreui/src/views/base/Navbars.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/base/ProgressBars.vue?vue&type=script&lang=js&":
-/*!**************************************************************************!*\
-  !*** ../coreui/src/views/base/ProgressBars.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************/
+/***/ "../coreui/src/views/base/Navbars.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ../coreui/src/views/base/Navbars.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_ProgressBars_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./ProgressBars.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/ProgressBars.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_ProgressBars_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbars_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./Navbars.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Navbars.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbars_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/base/ProgressBars.vue?vue&type=template&id=6bded8de&":
-/*!********************************************************************************!*\
-  !*** ../coreui/src/views/base/ProgressBars.vue?vue&type=template&id=6bded8de& ***!
-  \********************************************************************************/
+/***/ "../coreui/src/views/base/Navbars.vue?vue&type=template&id=e28a89e2&":
+/*!***************************************************************************!*\
+  !*** ../coreui/src/views/base/Navbars.vue?vue&type=template&id=e28a89e2& ***!
+  \***************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_ProgressBars_vue_vue_type_template_id_6bded8de___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./ProgressBars.vue?vue&type=template&id=6bded8de& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/ProgressBars.vue?vue&type=template&id=6bded8de&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_ProgressBars_vue_vue_type_template_id_6bded8de___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbars_vue_vue_type_template_id_e28a89e2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./Navbars.vue?vue&type=template&id=e28a89e2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Navbars.vue?vue&type=template&id=e28a89e2&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbars_vue_vue_type_template_id_e28a89e2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_ProgressBars_vue_vue_type_template_id_6bded8de___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbars_vue_vue_type_template_id_e28a89e2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/ProgressBars.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/ProgressBars.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Navbars.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Navbars.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -285,69 +246,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'ProgressBars',
+  name: 'Navbars',
   data: function data() {
     return {
-      counter: 73,
-      max: 100,
-      max2: 50,
-      value: 33.333333333,
-      value3: 75,
-      bars: [{
-        color: 'success',
-        value: 75
-      }, {
-        color: 'info',
-        value: 75
-      }, {
-        color: 'warning',
-        value: 75
-      }, {
-        color: 'danger',
-        value: 75
-      }, {
-        color: 'primary',
-        value: 75
-      }, {
-        color: 'secondary',
-        value: 75
-      }, {
-        color: 'dark',
-        value: 75
-      }],
-      timer: null,
-      striped: true,
-      animate: true,
-      max3: 100,
-      values: [15, 30, 20]
+      show: false,
+      navbarText: false,
+      navbarDropdown: false
     };
-  },
-  methods: {
-    clicked: function clicked() {
-      this.counter = Math.random() * this.max;
-    }
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    this.timer = setInterval(function () {
-      _this.bars.forEach(function (bar) {
-        bar.value = 25 + Math.random() * 75;
-      });
-    }, 2000);
-  },
-  beforeDestroy: function beforeDestroy() {
-    clearInterval(this.timer);
-    this.timer = null;
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/ProgressBars.vue?vue&type=template&id=6bded8de&":
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/ProgressBars.vue?vue&type=template&id=6bded8de& ***!
-  \**************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Navbars.vue?vue&type=template&id=e28a89e2&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Navbars.vue?vue&type=template&id=e28a89e2& ***!
+  \*********************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -370,7 +284,7 @@ var render = function() {
             [
               _c("CIcon", { attrs: { name: "cil-justify-center" } }),
               _vm._v(" "),
-              _c("strong", [_vm._v(" Bootstrap Progress")]),
+              _c("strong", [_vm._v(" Bootstrap Navbar ")]),
               _vm._v(" "),
               _c("div", { staticClass: "card-header-actions" }, [
                 _c(
@@ -378,7 +292,7 @@ var render = function() {
                   {
                     staticClass: "card-header-action",
                     attrs: {
-                      href: "https://coreui.io/vue/docs/components/progress",
+                      href: "https://coreui.io/vue/docs/components/navbar",
                       rel: "noreferrer noopener",
                       target: "_blank"
                     }
@@ -393,323 +307,105 @@ var render = function() {
           _c(
             "CCardBody",
             [
-              _c("CProgress", {
-                attrs: {
-                  value: _vm.counter,
-                  max: _vm.max,
-                  "show-percentage": "",
-                  animated: ""
-                }
-              }),
-              _vm._v(" "),
               _c(
-                "CProgress",
-                {
-                  staticClass: "mt-1",
-                  attrs: { max: _vm.max, "show-value": "" }
-                },
+                "CNavbar",
+                { attrs: { expandable: "md", color: "info" } },
                 [
-                  _c("CProgressBar", {
-                    attrs: { value: _vm.counter * (6 / 10), color: "success" }
-                  }),
-                  _vm._v(" "),
-                  _c("CProgressBar", {
-                    attrs: { value: _vm.counter * (2.5 / 10), color: "warning" }
-                  }),
-                  _vm._v(" "),
-                  _c("CProgressBar", {
-                    attrs: { value: _vm.counter * (1.5 / 10), color: "danger" }
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "CButton",
-                {
-                  staticClass: "mt-4",
-                  attrs: { color: "secondary" },
-                  on: { click: _vm.clicked }
-                },
-                [_vm._v("\n        Click me to animate progress bars\n      ")]
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CCard",
-        [
-          _c(
-            "CCardHeader",
-            [
-              _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-              _vm._v(" "),
-              _c("strong", [_vm._v(" Progress ")]),
-              _c("small", [_vm._v("labels")])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCardBody",
-            [
-              _c("h6", [_vm._v("No label")]),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-3",
-                attrs: { value: _vm.value, max: _vm.max2 }
-              }),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Value label")]),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-3",
-                attrs: { value: _vm.value, max: _vm.max2, "show-value": "" }
-              }),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Progress label")]),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-3",
-                attrs: {
-                  value: _vm.value,
-                  max: _vm.max2,
-                  "show-percentage": ""
-                }
-              }),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Value label with precision")]),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-3",
-                attrs: {
-                  value: _vm.value,
-                  max: _vm.max2,
-                  precision: 2,
-                  "show-value": ""
-                }
-              }),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Progress label with precision")]),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-3",
-                attrs: {
-                  value: _vm.value,
-                  max: _vm.max2,
-                  precision: 2,
-                  "show-percentage": ""
-                }
-              })
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CCard",
-        [
-          _c(
-            "CCardHeader",
-            [
-              _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-              _vm._v(" "),
-              _c("strong", [_vm._v(" Progress ")]),
-              _vm._v(" "),
-              _c("small", [_vm._v("width")])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCardBody",
-            [
-              _c("h6", [_vm._v("Default width")]),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-3",
-                attrs: { value: _vm.value3 }
-              }),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Custom widths")]),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "w-75 mb-2",
-                attrs: { value: _vm.value3 }
-              }),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "w-50 mb-2",
-                attrs: { value: _vm.value3 }
-              }),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "w-25",
-                attrs: { value: _vm.value3 }
-              })
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CCard",
-        [
-          _c(
-            "CCardHeader",
-            [
-              _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-              _vm._v(" "),
-              _c("strong", [_vm._v(" Progress ")]),
-              _vm._v(" "),
-              _c("small", [_vm._v("height")])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCardBody",
-            [
-              _c("h6", [_vm._v("Default height")]),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-3",
-                attrs: { value: _vm.value3, "show-percentage": "" }
-              }),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Custom heights")]),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-2",
-                attrs: {
-                  height: "2rem",
-                  value: _vm.value3,
-                  "show-percentage": ""
-                }
-              }),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-2",
-                attrs: {
-                  height: "20px",
-                  value: _vm.value3,
-                  "show-percentage": ""
-                }
-              }),
-              _vm._v(" "),
-              _c("CProgress", { attrs: { height: "2px", value: _vm.value3 } })
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CCard",
-        [
-          _c(
-            "CCardHeader",
-            [
-              _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-              _vm._v(" "),
-              _c("strong", [_vm._v(" Progress ")]),
-              _vm._v(" "),
-              _c("small", [_vm._v("colors")])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCardBody",
-            _vm._l(_vm.bars, function(bar, index) {
-              return _c("div", { key: index, staticClass: "row mb-1" }, [
-                _c("div", { staticClass: "col-sm-2" }, [
-                  _vm._v(_vm._s(bar.color) + ":")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "col-sm-10 pt-1" },
-                  [
-                    _c("CProgress", {
-                      key: bar.color,
-                      attrs: { value: bar.value, color: bar.color }
-                    })
-                  ],
-                  1
-                )
-              ])
-            }),
-            0
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CCard",
-        [
-          _c(
-            "CCardHeader",
-            [
-              _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-              _vm._v(" "),
-              _c("strong", [_vm._v(" Progress ")]),
-              _vm._v(" "),
-              _c("small", [_vm._v("striped")])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCardBody",
-            [
-              _c("CProgress", {
-                staticClass: "mb-2",
-                attrs: { value: 25, color: "success", striped: _vm.striped }
-              }),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-2",
-                attrs: { value: 50, color: "info", striped: _vm.striped }
-              }),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-2",
-                attrs: { value: 75, color: "warning", striped: _vm.striped }
-              }),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-2",
-                attrs: { value: 100, color: "danger", striped: _vm.striped }
-              }),
-              _vm._v(" "),
-              _c(
-                "CButton",
-                {
-                  attrs: { color: "secondary" },
-                  on: {
-                    click: function($event) {
-                      _vm.striped = !_vm.striped
+                  _c("CToggler", {
+                    attrs: { inNavbar: "" },
+                    on: {
+                      click: function($event) {
+                        _vm.show = !_vm.show
+                      }
                     }
-                  }
-                },
-                [
-                  _vm._v(
-                    "\n        " +
-                      _vm._s(_vm.striped ? "Remove" : "Add") +
-                      " Striped\n      "
+                  }),
+                  _vm._v(" "),
+                  _c("CNavbarBrand", { attrs: { href: "#" } }, [
+                    _vm._v("NavBar")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "CCollapse",
+                    { attrs: { show: _vm.show, navbar: "" } },
+                    [
+                      _c(
+                        "CNavbarNav",
+                        [
+                          _c("CNavItem", { attrs: { href: "#" } }, [
+                            _vm._v("Link")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "CNavItem",
+                            { attrs: { href: "#", disabled: "" } },
+                            [_vm._v("Disabled")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "CNavbarNav",
+                        { staticClass: "ml-auto" },
+                        [
+                          _c(
+                            "CForm",
+                            {
+                              staticClass: "align-middle",
+                              attrs: { inline: "" }
+                            },
+                            [
+                              _c("CInput", {
+                                staticClass: "mr-2 my-0",
+                                attrs: { placeholder: "Search", size: "sm" }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "CButton",
+                                { attrs: { color: "light", size: "sm" } },
+                                [
+                                  _vm._v(
+                                    "\n                Search\n              "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CDropdown",
+                            { attrs: { "toggler-text": "Lang", "in-nav": "" } },
+                            [
+                              _c("CDropdownItem", [_vm._v("EN")]),
+                              _vm._v(" "),
+                              _c("CDropdownItem", [_vm._v("ES")]),
+                              _vm._v(" "),
+                              _c("CDropdownItem", [_vm._v("RU")]),
+                              _vm._v(" "),
+                              _c("CDropdownItem", [_vm._v("FA")])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CDropdown",
+                            { attrs: { "in-nav": "", "toggler-text": "User" } },
+                            [
+                              _c("CDropdownItem", [_vm._v("Profile")]),
+                              _vm._v(" "),
+                              _c("CDropdownItem", [_vm._v("Signout")])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
                   )
-                ]
+                ],
+                1
               )
             ],
             1
@@ -726,9 +422,9 @@ var render = function() {
             [
               _c("CIcon", { attrs: { name: "cil-justify-center" } }),
               _vm._v(" "),
-              _c("strong", [_vm._v(" Progress ")]),
+              _c("strong", [_vm._v(" Navbar ")]),
               _vm._v(" "),
-              _c("small", [_vm._v("animated")])
+              _c("small", [_vm._v("brand")])
             ],
             1
           ),
@@ -736,58 +432,77 @@ var render = function() {
           _c(
             "CCardBody",
             [
-              _c("CProgress", {
-                staticClass: "mb-2",
-                attrs: {
-                  value: 25,
-                  color: "success",
-                  striped: "",
-                  animated: _vm.animate
-                }
-              }),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-2",
-                attrs: {
-                  value: 50,
-                  color: "info",
-                  striped: "",
-                  animated: _vm.animate
-                }
-              }),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-2",
-                attrs: {
-                  value: 75,
-                  color: "warning",
-                  striped: "",
-                  animated: _vm.animate
-                }
-              }),
-              _vm._v(" "),
-              _c("CProgress", {
-                staticClass: "mb-3",
-                attrs: { value: 100, color: "danger", animated: _vm.animate }
-              }),
-              _vm._v(" "),
               _c(
-                "CButton",
-                {
-                  attrs: { color: "secondary" },
-                  on: {
-                    click: function($event) {
-                      _vm.animate = !_vm.animate
-                    }
-                  }
-                },
+                "CNavbar",
+                { attrs: { color: "faded", light: "" } },
                 [
-                  _vm._v(
-                    "\n        " +
-                      _vm._s(_vm.animate ? "Stop" : "Start") +
-                      " Animation\n      "
+                  _c("CNavbarBrand", { attrs: { href: "#" } }, [
+                    _c("img", {
+                      staticClass: "d-inline-block align-top",
+                      attrs: {
+                        src: "https://placekitten.com/g/30/30",
+                        alt: "CoreuiVue"
+                      }
+                    }),
+                    _vm._v("\n          CoreuiVue\n        ")
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CCard",
+        [
+          _c(
+            "CCardHeader",
+            [
+              _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+              _vm._v(" "),
+              _c("strong", [_vm._v(" Navbar ")]),
+              _vm._v(" "),
+              _c("small", [_vm._v("text")])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCardBody",
+            [
+              _c(
+                "CNavbar",
+                { attrs: { toggleable: "sm", light: "", color: "light" } },
+                [
+                  _c("CToggler", {
+                    attrs: { inNavbar: "" },
+                    on: {
+                      click: function($event) {
+                        _vm.navbarText = !_vm.navbarText
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("CNavbarBrand", [_vm._v("CoreuiVue")]),
+                  _vm._v(" "),
+                  _c(
+                    "CCollapse",
+                    { attrs: { show: _vm.navbarText, navbar: "" } },
+                    [
+                      _c(
+                        "CNavbarNav",
+                        [_c("CNavbarText", [_vm._v("Navbar text")])],
+                        1
+                      )
+                    ],
+                    1
                   )
-                ]
+                ],
+                1
               )
             ],
             1
@@ -804,9 +519,9 @@ var render = function() {
             [
               _c("CIcon", { attrs: { name: "cil-justify-center" } }),
               _vm._v(" "),
-              _c("strong", [_vm._v(" Progress ")]),
+              _c("strong", [_vm._v(" Navbar ")]),
               _vm._v(" "),
-              _c("small", [_vm._v("multiple bars")])
+              _c("small", [_vm._v("dropdown")])
             ],
             1
           ),
@@ -815,97 +530,159 @@ var render = function() {
             "CCardBody",
             [
               _c(
-                "CProgress",
-                { staticClass: "mb-3", attrs: { max: _vm.max3 } },
+                "CNavbar",
+                { attrs: { expandable: "sm", color: "primary" } },
                 [
-                  _c("CProgressBar", {
-                    attrs: { color: "primary", value: _vm.values[0] }
-                  }),
-                  _vm._v(" "),
-                  _c("CProgressBar", {
-                    attrs: { color: "success", value: _vm.values[1] }
-                  }),
-                  _vm._v(" "),
-                  _c("CProgressBar", {
-                    attrs: { color: "info", value: _vm.values[2] }
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "CProgress",
-                {
-                  staticClass: "mb-3",
-                  attrs: { "show-percentage": "", max: _vm.max3 }
-                },
-                [
-                  _c("CProgressBar", {
-                    attrs: { color: "primary", value: _vm.values[0] }
-                  }),
-                  _vm._v(" "),
-                  _c("CProgressBar", {
-                    attrs: { color: "success", value: _vm.values[1] }
-                  }),
-                  _vm._v(" "),
-                  _c("CProgressBar", {
-                    attrs: { color: "info", value: _vm.values[2] }
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "CProgress",
-                {
-                  staticClass: "mb-3",
-                  attrs: { "show-value": "", striped: "", max: _vm.max3 }
-                },
-                [
-                  _c("CProgressBar", {
-                    attrs: { color: "primary", value: _vm.values[0] }
-                  }),
-                  _vm._v(" "),
-                  _c("CProgressBar", {
-                    attrs: { color: "success", value: _vm.values[1] }
-                  }),
-                  _vm._v(" "),
-                  _c("CProgressBar", {
-                    attrs: { color: "info", value: _vm.values[2] }
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "CProgress",
-                { staticClass: "mb-3", attrs: { max: _vm.max3 } },
-                [
-                  _c("CProgressBar", {
-                    attrs: {
-                      color: "primary",
-                      value: _vm.values[0],
-                      "show-percentage": ""
+                  _c("CToggler", {
+                    attrs: { inNavbar: "" },
+                    on: {
+                      click: function($event) {
+                        _vm.navbarDropdown = !_vm.navbarDropdown
+                      }
                     }
                   }),
                   _vm._v(" "),
-                  _c("CProgressBar", {
-                    attrs: {
-                      color: "success",
-                      value: _vm.values[1],
-                      animated: "",
-                      "show-percentage": ""
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("CProgressBar", {
-                    attrs: {
-                      color: "info",
-                      value: _vm.values[2],
-                      striped: "",
-                      "show-percentage": ""
-                    }
-                  })
+                  _c(
+                    "CCollapse",
+                    { attrs: { show: _vm.navbarDropdown, navbar: "" } },
+                    [
+                      _c(
+                        "CNavbarNav",
+                        [
+                          _c("CNavItem", { attrs: { href: "#" } }, [
+                            _vm._v("Home")
+                          ]),
+                          _vm._v(" "),
+                          _c("CNavItem", { attrs: { href: "#" } }, [
+                            _vm._v("Link")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "CDropdown",
+                            { attrs: { "toggler-text": "Lang", "in-nav": "" } },
+                            [
+                              _c("CDropdownItem", [_vm._v("EN")]),
+                              _vm._v(" "),
+                              _c("CDropdownItem", [_vm._v("ES")]),
+                              _vm._v(" "),
+                              _c("CDropdownItem", [_vm._v("RU")]),
+                              _vm._v(" "),
+                              _c("CDropdownItem", [_vm._v("FA")])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CDropdown",
+                            { attrs: { "toggler-text": "User", "in-nav": "" } },
+                            [
+                              _c("CDropdownItem", [_vm._v("Account")]),
+                              _vm._v(" "),
+                              _c("CDropdownItem", [_vm._v("Settings")])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CCard",
+        [
+          _c(
+            "CCardHeader",
+            [
+              _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+              _vm._v(" "),
+              _c("strong", [_vm._v(" Navbar ")]),
+              _vm._v(" "),
+              _c("small", [_vm._v("form")])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCardBody",
+            [
+              _c(
+                "CNavbar",
+                { attrs: { light: "", color: "light" } },
+                [
+                  _c(
+                    "CForm",
+                    { attrs: { inline: "" } },
+                    [
+                      _c("CInput", {
+                        staticClass: "mr-sm-2",
+                        attrs: { placeholder: "Search", size: "sm" }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "CButton",
+                        {
+                          staticClass: "my-2 my-sm-0",
+                          attrs: { color: "outline-success", type: "submit" }
+                        },
+                        [_vm._v("Search")]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CCard",
+        [
+          _c(
+            "CCardHeader",
+            [
+              _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+              _vm._v(" "),
+              _c("strong", [_vm._v(" Navbar ")]),
+              _vm._v(" "),
+              _c("small", [_vm._v("input group")])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCardBody",
+            [
+              _c(
+                "CNavbar",
+                { attrs: { light: "", color: "light" } },
+                [
+                  _c(
+                    "CForm",
+                    { attrs: { inline: "" } },
+                    [
+                      _c("CInput", {
+                        staticClass: "mr-sm-2",
+                        attrs: { placeholder: "Username" }
+                      })
+                    ],
+                    1
+                  )
                 ],
                 1
               )

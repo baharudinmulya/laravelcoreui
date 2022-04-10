@@ -139,7 +139,7 @@ class MenusTableSeeder extends Seeder
         $this->insertLink('guest', 'Login', '/login', 'cil-account-logout');
         $this->insertLink('guest', 'Register', '/register', 'cil-account-logout');
         // $this->beginDropdown('admin', 'Settings', '/settings', 'cil-puzzle');
-        //     $this->insertLink('admin', 'Media',    '/media');
+            $this->insertLink('admin', 'Media',    '/media');
         //     $this->insertLink('admin', 'Users',    '/users');
             
         //     $this->insertLink('admin', 'BREAD',    '/bread');
@@ -147,20 +147,22 @@ class MenusTableSeeder extends Seeder
         // $this->endDropdown();
        
             // $this->insertLink('admin', 'Menu',    '/menu');
-            $this->insertLink('user,admin', 'Kategori',    '/admin/kategori');
-            $this->insertLink('user,admin', 'Produk',    '/admin/produk');
-            $this->insertLink('user,admin', 'Pesanan',    '/admin/pesanan');
-        $this->beginDropdown('admin', 'Laporan', '/laporan', 'cil-puzzle');
-            $this->insertLink('user,admin', 'Laporanpenj',    '/laporan/laporanpenj');
+
+            $this->insertTitle('user,admin', 'Menu Sidebar');
+            $this->insertLink('user,admin', 'Kategori',    '/admin/kategori', 'cil-speedometer');
+            $this->insertLink('user,admin', 'Produk',    '/admin/produk', 'cil-drop');
+            $this->insertLink('user,admin', 'Pesanan',    '/admin/pesanan', 'cil-pencil');
+        $this->beginDropdown('admin', 'Laporan', '/laporan', 'cil-star');
+            $this->insertLink('user,admin', 'Laporan penjualan',    '/laporan/laporanpenj', 'cil-speedometer');
         $this->endDropdown();   
-        $this->beginDropdown('admin', 'Settings', '/setting', 'cil-puzzle');
-            $this->insertLink('user,admin', 'TambahCust',    '/setting/tambahcust');
+        $this->beginDropdown('admin', 'Settings', '/setting', 'cil-star');
+            $this->insertLink('user,admin', 'Tambah Customer',    '/setting/tambahcust', 'cil-speedometer');
         $this->endDropdown();   
         // $this->insertTitle('user,admin', 'Theme');
         // $this->insertLink('user,admin', 'Colors', '/colors', 'cil-drop');
         // $this->insertLink('user,admin', 'Typography', '/typography', 'cil-pencil');
         // $this->insertTitle('user,admin', 'Components');
-        // $this->beginDropdown('user,admin', 'Base', '/base', 'cil-puzzle');
+        $this->beginDropdown('user,admin', 'Base', '/base', 'cil-puzzle');
         //     $this->insertLink('user,admin', 'Breadcrumb',    '/base/breadcrumb');
         //     $this->insertLink('user,admin', 'Cards',         '/base/cards');
         //     $this->insertLink('user,admin', 'Carousel',      '/base/carousel');
@@ -174,7 +176,7 @@ class MenusTableSeeder extends Seeder
         //     $this->insertLink('user,admin', 'Progress',      '/base/progress');
            // $this->insertLink('user,admin', 'Scrollspy',     '/base/scrollspy');  
             // $this->insertLink('user,admin', 'Switches',      '/base/switches');
-            // $this->insertLink('user,admin', 'Tables',        '/base/tables');
+            $this->insertLink('user,admin', 'Tables',        '/base/tables');
             // $this->insertLink('user,admin', 'Tabs',          '/base/tabs');
             // $this->insertLink('user,admin', 'Tooltips',      '/base/tooltips');
         // $this->endDropdown();

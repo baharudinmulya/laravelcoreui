@@ -980,6 +980,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2343,11 +2350,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [_c("WidgetsDropdown"), _vm._v(" "), _c("WidgetsDropdown2")],
-    1
-  )
+  return _c("div", [
+    _c("div", { staticClass: "card border-light mb-3" }, [
+      _c("div", { staticClass: "card-header" }, [_vm._v("Header")]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "card-body" },
+        [_c("WidgetsDropdown"), _vm._v(" "), _c("WidgetsDropdown2")],
+        1
+      )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -2974,8 +2988,8 @@ var render = function() {
           _c("CWidgetDropdown", {
             attrs: {
               color: "primary",
-              header: "9.823",
-              text: "Members online"
+              header: "Rp. 0",
+              text: "Keseluruhan Omset"
             },
             scopedSlots: _vm._u([
               {
@@ -3049,7 +3063,7 @@ var render = function() {
         { attrs: { sm: "6", lg: "3" } },
         [
           _c("CWidgetDropdown", {
-            attrs: { color: "info", header: "9.823", text: "Members online" },
+            attrs: { color: "info", header: "0", text: "Customer" },
             scopedSlots: _vm._u([
               {
                 key: "default",
@@ -3126,11 +3140,7 @@ var render = function() {
         { attrs: { sm: "6", lg: "3" } },
         [
           _c("CWidgetDropdown", {
-            attrs: {
-              color: "warning",
-              header: "9.823",
-              text: "Members online"
-            },
+            attrs: { color: "warning", header: "0", text: "Kategori Produk" },
             scopedSlots: _vm._u([
               {
                 key: "default",
@@ -3204,7 +3214,7 @@ var render = function() {
         { attrs: { sm: "6", lg: "3" } },
         [
           _c("CWidgetDropdown", {
-            attrs: { color: "danger", header: "9.823", text: "Members online" },
+            attrs: { color: "danger", header: "0", text: "Produk" },
             scopedSlots: _vm._u([
               {
                 key: "default",
@@ -3303,11 +3313,7 @@ var render = function() {
         { attrs: { sm: "6", lg: "3" } },
         [
           _c("CWidgetDropdown", {
-            attrs: {
-              color: "primary",
-              header: "9.823",
-              text: "Members online"
-            },
+            attrs: { color: "primary", header: "0", text: "Orderan Baru" },
             scopedSlots: _vm._u([
               {
                 key: "default",
@@ -3380,7 +3386,11 @@ var render = function() {
         { attrs: { sm: "6", lg: "3" } },
         [
           _c("CWidgetDropdown", {
-            attrs: { color: "info", header: "9.823", text: "Members online" },
+            attrs: {
+              color: "info",
+              header: "0",
+              text: "Order sedang diproses"
+            },
             scopedSlots: _vm._u([
               {
                 key: "default",
@@ -3457,11 +3467,7 @@ var render = function() {
         { attrs: { sm: "6", lg: "3" } },
         [
           _c("CWidgetDropdown", {
-            attrs: {
-              color: "warning",
-              header: "9.823",
-              text: "Members online"
-            },
+            attrs: { color: "warning", header: "0", text: "Order dikirim" },
             scopedSlots: _vm._u([
               {
                 key: "default",
@@ -3535,7 +3541,7 @@ var render = function() {
         { attrs: { sm: "6", lg: "3" } },
         [
           _c("CWidgetDropdown", {
-            attrs: { color: "danger", header: "9.823", text: "Members online" },
+            attrs: { color: "danger", header: "0", text: "Orderan Selesai" },
             scopedSlots: _vm._u([
               {
                 key: "default",

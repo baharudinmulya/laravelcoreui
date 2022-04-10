@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[11],{
 
-/***/ "../coreui/src/views/base/Jumbotrons.vue":
-/*!***********************************************!*\
-  !*** ../coreui/src/views/base/Jumbotrons.vue ***!
-  \***********************************************/
+/***/ "../coreui/src/views/base/Cards.vue":
+/*!******************************************!*\
+  !*** ../coreui/src/views/base/Cards.vue ***!
+  \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Jumbotrons.vue?vue&type=template&id=3248f96a& */ "../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a&");
-/* harmony import */ var _Jumbotrons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Jumbotrons.vue?vue&type=script&lang=js& */ "../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Cards_vue_vue_type_template_id_43e8910f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Cards.vue?vue&type=template&id=43e8910f& */ "../coreui/src/views/base/Cards.vue?vue&type=template&id=43e8910f&");
+/* harmony import */ var _Cards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Cards.vue?vue&type=script&lang=js& */ "../coreui/src/views/base/Cards.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../laravel/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Jumbotrons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Cards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Cards_vue_vue_type_template_id_43e8910f___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Cards_vue_vue_type_template_id_43e8910f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,52 +32,243 @@ var component = Object(_laravel_node_modules_vue_loader_lib_runtime_componentNor
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/base/Jumbotrons.vue"
+component.options.__file = "coreui/src/views/base/Cards.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js&":
-/*!************************************************************************!*\
-  !*** ../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js& ***!
-  \************************************************************************/
+/***/ "../coreui/src/views/base/Cards.vue?vue&type=script&lang=js&":
+/*!*******************************************************************!*\
+  !*** ../coreui/src/views/base/Cards.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./Jumbotrons.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./Cards.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Cards.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a&":
-/*!******************************************************************************!*\
-  !*** ../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a& ***!
-  \******************************************************************************/
+/***/ "../coreui/src/views/base/Cards.vue?vue&type=template&id=43e8910f&":
+/*!*************************************************************************!*\
+  !*** ../coreui/src/views/base/Cards.vue?vue&type=template&id=43e8910f& ***!
+  \*************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./Jumbotrons.vue?vue&type=template&id=3248f96a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_template_id_43e8910f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./Cards.vue?vue&type=template&id=43e8910f& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Cards.vue?vue&type=template&id=43e8910f&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_template_id_43e8910f___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Cards_vue_vue_type_template_id_43e8910f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Cards.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Cards.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -164,15 +355,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Jumbotrons'
+  name: 'Cards',
+  data: function data() {
+    return {
+      show: true,
+      isCollapsed: true,
+      loremIpsum: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'
+    };
+  }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a&":
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a& ***!
-  \************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Cards.vue?vue&type=template&id=43e8910f&":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Cards.vue?vue&type=template&id=43e8910f& ***!
+  \*******************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -192,69 +390,39 @@ var render = function() {
         [
           _c(
             "CCol",
+            { attrs: { sm: "6", md: "4" } },
             [
               _c(
                 "CCard",
                 [
-                  _c(
-                    "CCardHeader",
-                    [
-                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-                      _vm._v(" "),
-                      _c("strong", [_vm._v(" Bootstrap Jumbotron ")]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "card-header-actions" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "card-header-action",
-                            attrs: {
-                              href:
-                                "https://coreui.io/vue/docs/components/jumbotron",
-                              rel: "noreferrer noopener",
-                              target: "_blank"
-                            }
-                          },
-                          [
-                            _c("small", { staticClass: "text-muted" }, [
-                              _vm._v("docs")
-                            ])
-                          ]
-                        )
-                      ])
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "CCardBody",
-                    [
+                  _c("CCardHeader", [
+                    _vm._v("\n          Card title\n          "),
+                    _c("div", { staticClass: "card-header-actions" }, [
                       _c(
-                        "CJumbotron",
+                        "a",
+                        {
+                          staticClass: "card-header-action",
+                          attrs: {
+                            href:
+                              "https://coreui.io/vue/docs/components/card-components",
+                            rel: "noreferrer noopener",
+                            target: "_blank"
+                          }
+                        },
                         [
-                          _c("h1", { staticClass: "display-3" }, [
-                            _vm._v("Bootstrap 4")
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "lead" }, [
-                            _vm._v("Bootstrap 4 Components for Vue.js 2.6+")
-                          ]),
-                          _vm._v(" "),
-                          _c("p", [
-                            _vm._v("For more information visit website")
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "CButton",
-                            { attrs: { color: "primary", href: "#" } },
-                            [_vm._v("More Info")]
-                          )
-                        ],
-                        1
+                          _c("small", { staticClass: "text-muted" }, [
+                            _vm._v("docs")
+                          ])
+                        ]
                       )
-                    ],
-                    1
-                  )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("CCardBody", [
+                    _vm._v(
+                      "\n          " + _vm._s(_vm.loremIpsum) + "\n        "
+                    )
+                  ])
                 ],
                 1
               )
@@ -264,6 +432,24 @@ var render = function() {
           _vm._v(" "),
           _c(
             "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))]),
+                  _vm._v(" "),
+                  _c("CCardFooter", [_vm._v("Card Footer")])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
             [
               _c(
                 "CCard",
@@ -271,57 +457,121 @@ var render = function() {
                   _c(
                     "CCardHeader",
                     [
-                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-                      _vm._v(" "),
-                      _c("strong", [_vm._v(" Jumbotron ")]),
-                      _vm._v(" "),
-                      _c("small", [_vm._v("with slots")])
+                      _c("CIcon", { attrs: { name: "cil-check" } }),
+                      _vm._v(" Card with icon")
                     ],
                     1
                   ),
                   _vm._v(" "),
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                [
                   _c(
-                    "CCardBody",
+                    "CCardHeader",
                     [
+                      _vm._v("\n          Card with switch\n          "),
+                      _c("CSwitch", {
+                        staticClass: "float-right",
+                        attrs: {
+                          size: "sm",
+                          shape: "pill",
+                          color: "info",
+                          "data-on": "On",
+                          "data-off": "Off",
+                          checked: true
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("CCardBody", [
+                    _vm._v(
+                      "\n          " + _vm._s(_vm.loremIpsum) + "\n        "
+                    )
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _vm._v("\n          Card with label\n          "),
                       _c(
-                        "CJumbotron",
-                        { attrs: { header: "Bootstrap 4", lead: "" } },
-                        [
-                          _c("h1", { staticClass: "display-3" }, [
-                            _vm._v("Bootstrap 4")
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "lead" }, [
-                            _vm._v(
-                              "\n              This is a simple hero unit, a simple jumbotron-style component for\n              calling extra attention to featured content or information.\n            "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("hr", { staticClass: "my-4" }),
-                          _vm._v(" "),
-                          _c("p", [
-                            _vm._v(
-                              "\n              It uses utility classes for typography and spacing to space content\n              out within the larger container.\n            "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "CButton",
-                            { attrs: { color: "primary", href: "#" } },
-                            [_vm._v("Do Something")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "CButton",
-                            { attrs: { color: "success", href: "#" } },
-                            [_vm._v("Do Something Else")]
-                          )
-                        ],
-                        1
+                        "CBadge",
+                        {
+                          staticClass: "float-right",
+                          attrs: { color: "success" }
+                        },
+                        [_vm._v("Success")]
                       )
                     ],
                     1
-                  )
+                  ),
+                  _vm._v(" "),
+                  _c("CCardBody", [
+                    _vm._v(
+                      "\n          " + _vm._s(_vm.loremIpsum) + "\n        "
+                    )
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _vm._v("\n          Card with label\n          "),
+                      _c(
+                        "CBadge",
+                        {
+                          staticClass: "float-right",
+                          attrs: { shape: "pill", color: "danger" }
+                        },
+                        [_vm._v("42")]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("CCardBody", [
+                    _vm._v(
+                      "\n          " + _vm._s(_vm.loremIpsum) + "\n        "
+                    )
+                  ])
                 ],
                 1
               )
@@ -337,57 +587,639 @@ var render = function() {
         [
           _c(
             "CCol",
+            { attrs: { sm: "6", md: "4" } },
             [
               _c(
                 "CCard",
+                { attrs: { "border-color": "primary" } },
                 [
-                  _c(
-                    "CCardHeader",
-                    [
-                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-                      _vm._v(" "),
-                      _c("strong", [_vm._v(" Jumbotron ")]),
-                      _vm._v(" "),
-                      _c("small", [_vm._v("colors")])
-                    ],
-                    1
-                  ),
+                  _c("CCardHeader", [_vm._v("Card outline primary")]),
                   _vm._v(" "),
-                  _c(
-                    "CCardBody",
-                    [
-                      _c(
-                        "CJumbotron",
-                        {
-                          attrs: {
-                            color: "info",
-                            "text-color": "white",
-                            "border-color": "dark"
-                          }
-                        },
-                        [
-                          _c("h1", { staticClass: "display-3" }, [
-                            _vm._v("Bootstrap 4")
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "lead" }, [
-                            _vm._v(
-                              "\n              This is a simple hero unit, a simple jumbotron-style component for\n              calling extra attention to featured content or information.\n            "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("hr", { staticClass: "my-4" }),
-                          _vm._v(" "),
-                          _c("p", [
-                            _vm._v(
-                              "\n              It uses utility classes for typography and spacing to space content\n              out within the larger container.\n            "
-                            )
-                          ])
-                        ]
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                { attrs: { "border-color": "secondary" } },
+                [
+                  _c("CCardHeader", [_vm._v("Card outline secondary")]),
+                  _vm._v(" "),
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                { attrs: { "border-color": "success" } },
+                [
+                  _c("CCardHeader", [_vm._v("Card outline success")]),
+                  _vm._v(" "),
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                { attrs: { "border-color": "info" } },
+                [
+                  _c("CCardHeader", [_vm._v("Card outline info")]),
+                  _vm._v(" "),
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                { attrs: { "border-color": "warning" } },
+                [
+                  _c("CCardHeader", [_vm._v("Card outline warning")]),
+                  _vm._v(" "),
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                { attrs: { "border-color": "danger" } },
+                [
+                  _c("CCardHeader", [_vm._v("Card outline danger")]),
+                  _vm._v(" "),
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CRow",
+        [
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                { attrs: { "accent-color": "primary" } },
+                [
+                  _c("CCardHeader", [_vm._v("Card with primary accent")]),
+                  _vm._v(" "),
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                { attrs: { "accent-color": "secondary" } },
+                [
+                  _c("CCardHeader", [_vm._v("Card with secondary accent")]),
+                  _vm._v(" "),
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                { attrs: { "accent-color": "success" } },
+                [
+                  _c("CCardHeader", [_vm._v("Card with success accent")]),
+                  _vm._v(" "),
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                { attrs: { "accent-color": "info" } },
+                [
+                  _c("CCardHeader", [_vm._v("Card with info accent")]),
+                  _vm._v(" "),
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                { attrs: { "accent-color": "info" } },
+                [
+                  _c("CCardHeader", [_vm._v("Card with info accent")]),
+                  _vm._v(" "),
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                { attrs: { "accent-color": "danger" } },
+                [
+                  _c("CCardHeader", [_vm._v("Card with danger accent")]),
+                  _vm._v(" "),
+                  _c("CCardBody", [_vm._v(_vm._s(_vm.loremIpsum))])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CRow",
+        [
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                {
+                  staticClass: "text-center",
+                  attrs: {
+                    color: "primary",
+                    "body-wrapper": "",
+                    "text-color": "white"
+                  }
+                },
+                [
+                  _c("blockquote", { staticClass: "card-blockquote" }, [
+                    _c("p", [
+                      _vm._v(
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
                       )
-                    ],
-                    1
-                  )
+                    ]),
+                    _vm._v(" "),
+                    _c("footer", [
+                      _vm._v("Someone famous in\n            "),
+                      _c("cite", { attrs: { title: "Source Title" } }, [
+                        _vm._v("Source Title")
+                      ])
+                    ])
+                  ])
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                {
+                  staticClass: "text-center",
+                  attrs: {
+                    color: "success",
+                    "body-wrapper": "",
+                    "text-color": "white"
+                  }
+                },
+                [
+                  _c("blockquote", { staticClass: "card-blockquote" }, [
+                    _c("p", [
+                      _vm._v(
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("footer", [
+                      _vm._v("Someone famous in\n            "),
+                      _c("cite", { attrs: { title: "Source Title" } }, [
+                        _vm._v("Source Title")
+                      ])
+                    ])
+                  ])
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                {
+                  staticClass: "text-center",
+                  attrs: {
+                    color: "info",
+                    "body-wrapper": "",
+                    "text-color": "white"
+                  }
+                },
+                [
+                  _c("blockquote", { staticClass: "card-blockquote" }, [
+                    _c("p", [
+                      _vm._v(
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("footer", [
+                      _vm._v("Someone famous in\n            "),
+                      _c("cite", { attrs: { title: "Source Title" } }, [
+                        _vm._v("Source Title")
+                      ])
+                    ])
+                  ])
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                {
+                  staticClass: "text-center",
+                  attrs: {
+                    color: "warning",
+                    "body-wrapper": "",
+                    "text-color": "white"
+                  }
+                },
+                [
+                  _c("blockquote", { staticClass: "card-blockquote" }, [
+                    _c("p", [
+                      _vm._v(
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("footer", [
+                      _vm._v("Someone famous in\n            "),
+                      _c("cite", { attrs: { title: "Source Title" } }, [
+                        _vm._v("Source Title")
+                      ])
+                    ])
+                  ])
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                {
+                  staticClass: "text-center",
+                  attrs: {
+                    color: "danger",
+                    "body-wrapper": "",
+                    "text-color": "white"
+                  }
+                },
+                [
+                  _c("blockquote", { staticClass: "card-blockquote" }, [
+                    _c("p", [
+                      _vm._v(
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("footer", [
+                      _vm._v("Someone famous in\n            "),
+                      _c("cite", { attrs: { title: "Source Title" } }, [
+                        _vm._v("Source Title")
+                      ])
+                    ])
+                  ])
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                {
+                  staticClass: "text-center",
+                  attrs: { color: "secondary", "body-wrapper": "" }
+                },
+                [
+                  _c("blockquote", { staticClass: "card-blockquote" }, [
+                    _c("p", [
+                      _vm._v(
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("footer", [
+                      _vm._v("Someone famous in\n            "),
+                      _c("cite", { attrs: { title: "Source Title" } }, [
+                        _vm._v("Source Title")
+                      ])
+                    ])
+                  ])
+                ]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "CRow",
+        [
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                {
+                  attrs: {
+                    color: "primary",
+                    "body-wrapper": "",
+                    "text-color": "white"
+                  }
+                },
+                [_vm._v("\n        " + _vm._s(_vm.loremIpsum) + "\n      ")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                {
+                  attrs: {
+                    color: "success",
+                    "body-wrapper": "",
+                    "text-color": "white"
+                  }
+                },
+                [_vm._v("\n        " + _vm._s(_vm.loremIpsum) + "\n      ")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                {
+                  attrs: {
+                    color: "info",
+                    "body-wrapper": "",
+                    "text-color": "white"
+                  }
+                },
+                [_vm._v("\n        " + _vm._s(_vm.loremIpsum) + "\n      ")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                {
+                  attrs: {
+                    color: "warning",
+                    "body-wrapper": "",
+                    "text-color": "white"
+                  }
+                },
+                [_vm._v("\n        " + _vm._s(_vm.loremIpsum) + "\n      ")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "CCard",
+                {
+                  attrs: {
+                    color: "danger",
+                    "body-wrapper": "",
+                    "text-color": "white"
+                  }
+                },
+                [_vm._v("\n        " + _vm._s(_vm.loremIpsum) + "\n      ")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "CCol",
+            { attrs: { sm: "6", md: "4" } },
+            [
+              _c(
+                "transition",
+                { attrs: { name: "fade" } },
+                [
+                  _vm.show
+                    ? _c(
+                        "CCard",
+                        { attrs: { color: "secondary" } },
+                        [
+                          _c("CCardHeader", [
+                            _vm._v(
+                              "\n            Card with header actions\n            "
+                            ),
+                            _c(
+                              "div",
+                              { staticClass: "card-header-actions" },
+                              [
+                                _c(
+                                  "CLink",
+                                  {
+                                    staticClass:
+                                      "card-header-action btn-setting",
+                                    attrs: { href: "#" }
+                                  },
+                                  [
+                                    _c("CIcon", {
+                                      attrs: { name: "cil-settings" }
+                                    })
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "CLink",
+                                  {
+                                    staticClass:
+                                      "card-header-action btn-minimize",
+                                    on: {
+                                      click: function($event) {
+                                        _vm.isCollapsed = !_vm.isCollapsed
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("CIcon", {
+                                      attrs: {
+                                        name:
+                                          "cil-chevron-" +
+                                          (_vm.isCollapsed ? "bottom" : "top")
+                                      }
+                                    })
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "CLink",
+                                  {
+                                    staticClass: "card-header-action btn-close",
+                                    attrs: { href: "#" },
+                                    on: {
+                                      click: function($event) {
+                                        _vm.show = false
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("CIcon", {
+                                      attrs: { name: "cil-x-circle" }
+                                    })
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "CCollapse",
+                            { attrs: { show: _vm.isCollapsed, duration: 400 } },
+                            [
+                              _c("CCardBody", [
+                                _vm._v(
+                                  "\n              " +
+                                    _vm._s(_vm.loremIpsum) +
+                                    "\n            "
+                                )
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    : _vm._e()
                 ],
                 1
               )

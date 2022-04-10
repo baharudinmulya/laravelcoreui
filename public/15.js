@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[15],{
 
-/***/ "../coreui/src/views/base/Paginations.vue":
-/*!************************************************!*\
-  !*** ../coreui/src/views/base/Paginations.vue ***!
-  \************************************************/
+/***/ "../coreui/src/views/base/Jumbotrons.vue":
+/*!***********************************************!*\
+  !*** ../coreui/src/views/base/Jumbotrons.vue ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Paginations_vue_vue_type_template_id_3c225bc5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Paginations.vue?vue&type=template&id=3c225bc5& */ "../coreui/src/views/base/Paginations.vue?vue&type=template&id=3c225bc5&");
-/* harmony import */ var _Paginations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Paginations.vue?vue&type=script&lang=js& */ "../coreui/src/views/base/Paginations.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Jumbotrons.vue?vue&type=template&id=3248f96a& */ "../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a&");
+/* harmony import */ var _Jumbotrons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Jumbotrons.vue?vue&type=script&lang=js& */ "../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../laravel/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Paginations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Paginations_vue_vue_type_template_id_3c225bc5___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Paginations_vue_vue_type_template_id_3c225bc5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Jumbotrons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,52 +32,53 @@ var component = Object(_laravel_node_modules_vue_loader_lib_runtime_componentNor
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/base/Paginations.vue"
+component.options.__file = "coreui/src/views/base/Jumbotrons.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/base/Paginations.vue?vue&type=script&lang=js&":
-/*!*************************************************************************!*\
-  !*** ../coreui/src/views/base/Paginations.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************/
+/***/ "../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Paginations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./Paginations.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Paginations.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Paginations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./Jumbotrons.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/base/Paginations.vue?vue&type=template&id=3c225bc5&":
-/*!*******************************************************************************!*\
-  !*** ../coreui/src/views/base/Paginations.vue?vue&type=template&id=3c225bc5& ***!
-  \*******************************************************************************/
+/***/ "../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a&":
+/*!******************************************************************************!*\
+  !*** ../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a& ***!
+  \******************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Paginations_vue_vue_type_template_id_3c225bc5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./Paginations.vue?vue&type=template&id=3c225bc5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Paginations.vue?vue&type=template&id=3c225bc5&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Paginations_vue_vue_type_template_id_3c225bc5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./Jumbotrons.vue?vue&type=template&id=3248f96a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Paginations_vue_vue_type_template_id_3c225bc5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_Jumbotrons_vue_vue_type_template_id_3248f96a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Paginations.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Paginations.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Jumbotrons.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -163,20 +164,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Paginations',
-  data: function data() {
-    return {
-      currentPage: 3
-    };
-  }
+  name: 'Jumbotrons'
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Paginations.vue?vue&type=template&id=3c225bc5&":
-/*!*************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Paginations.vue?vue&type=template&id=3c225bc5& ***!
-  \*************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/base/Jumbotrons.vue?vue&type=template&id=3248f96a& ***!
+  \************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -192,107 +188,143 @@ var render = function() {
     "div",
     [
       _c(
-        "CCard",
+        "CRow",
         [
           _c(
-            "CCardHeader",
+            "CCol",
             [
-              _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-              _vm._v(" "),
-              _c("strong", [_vm._v(" Pagination ")]),
-              _vm._v(" "),
-              _c("small", [_vm._v("size")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-header-actions" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "card-header-action",
-                    attrs: {
-                      href: "https://coreui.io/vue/docs/components/pagination",
-                      rel: "noreferrer noopener",
-                      target: "_blank"
-                    }
-                  },
-                  [_c("small", { staticClass: "text-muted" }, [_vm._v("docs")])]
-                )
-              ])
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" Bootstrap Jumbotron ")]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-header-actions" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "card-header-action",
+                            attrs: {
+                              href:
+                                "https://coreui.io/vue/docs/components/jumbotron",
+                              rel: "noreferrer noopener",
+                              target: "_blank"
+                            }
+                          },
+                          [
+                            _c("small", { staticClass: "text-muted" }, [
+                              _vm._v("docs")
+                            ])
+                          ]
+                        )
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CJumbotron",
+                        [
+                          _c("h1", { staticClass: "display-3" }, [
+                            _vm._v("Bootstrap 4")
+                          ]),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "lead" }, [
+                            _vm._v("Bootstrap 4 Components for Vue.js 2.6+")
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v("For more information visit website")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "CButton",
+                            { attrs: { color: "primary", href: "#" } },
+                            [_vm._v("More Info")]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
             ],
             1
           ),
           _vm._v(" "),
           _c(
-            "CCardBody",
+            "CCol",
             [
-              _c("h6", [_vm._v("Default")]),
-              _vm._v(" "),
-              _c("CPagination", {
-                attrs: {
-                  "active-page": _vm.currentPage,
-                  pages: 10,
-                  responsive: ""
-                },
-                on: {
-                  "update:activePage": function($event) {
-                    _vm.currentPage = $event
-                  },
-                  "update:active-page": function($event) {
-                    _vm.currentPage = $event
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Small")]),
-              _vm._v(" "),
-              _c("CPagination", {
-                attrs: {
-                  size: "sm",
-                  "active-page": _vm.currentPage,
-                  pages: 10
-                },
-                on: {
-                  "update:activePage": function($event) {
-                    _vm.currentPage = $event
-                  },
-                  "update:active-page": function($event) {
-                    _vm.currentPage = $event
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
               _c(
-                "div",
-                { staticClass: "d-md-down-none" },
+                "CCard",
                 [
-                  _c("h6", [_vm._v("Large")]),
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" Jumbotron ")]),
+                      _vm._v(" "),
+                      _c("small", [_vm._v("with slots")])
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
-                  _c("CPagination", {
-                    attrs: {
-                      size: "lg",
-                      "active-page": _vm.currentPage,
-                      pages: 10,
-                      responsive: ""
-                    },
-                    on: {
-                      "update:activePage": function($event) {
-                        _vm.currentPage = $event
-                      },
-                      "update:active-page": function($event) {
-                        _vm.currentPage = $event
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("br")
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CJumbotron",
+                        { attrs: { header: "Bootstrap 4", lead: "" } },
+                        [
+                          _c("h1", { staticClass: "display-3" }, [
+                            _vm._v("Bootstrap 4")
+                          ]),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "lead" }, [
+                            _vm._v(
+                              "\n              This is a simple hero unit, a simple jumbotron-style component for\n              calling extra attention to featured content or information.\n            "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("hr", { staticClass: "my-4" }),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n              It uses utility classes for typography and spacing to space content\n              out within the larger container.\n            "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "CButton",
+                            { attrs: { color: "primary", href: "#" } },
+                            [_vm._v("Do Something")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "CButton",
+                            { attrs: { color: "success", href: "#" } },
+                            [_vm._v("Do Something Else")]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
                 ],
                 1
-              ),
-              _vm._v(" "),
-              _c("div", [_vm._v("currentPage: " + _vm._s(_vm.currentPage))])
+              )
             ],
             1
           )
@@ -301,80 +333,64 @@ var render = function() {
       ),
       _vm._v(" "),
       _c(
-        "CCard",
+        "CRow",
         [
           _c(
-            "CCardHeader",
+            "CCol",
             [
-              _c("CIcon", { attrs: { name: "cil-justify-center" } }),
-              _vm._v(" "),
-              _c("strong", [_vm._v(" Pagination ")]),
-              _vm._v(" "),
-              _c("small", [_vm._v("alignment")])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "CCardBody",
-            [
-              _c("h6", [_vm._v("Left alignment (default)")]),
-              _vm._v(" "),
-              _c("CPagination", {
-                attrs: { "active-page": _vm.currentPage, pages: 10 },
-                on: {
-                  "update:activePage": function($event) {
-                    _vm.currentPage = $event
-                  },
-                  "update:active-page": function($event) {
-                    _vm.currentPage = $event
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Center alignment")]),
-              _vm._v(" "),
-              _c("CPagination", {
-                attrs: {
-                  align: "center",
-                  pages: 10,
-                  "active-page": _vm.currentPage
-                },
-                on: {
-                  "update:activePage": function($event) {
-                    _vm.currentPage = $event
-                  },
-                  "update:active-page": function($event) {
-                    _vm.currentPage = $event
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Right (end) alignment")]),
-              _vm._v(" "),
-              _c("CPagination", {
-                attrs: {
-                  align: "end",
-                  "active-page": _vm.currentPage,
-                  pages: 10
-                },
-                on: {
-                  "update:activePage": function($event) {
-                    _vm.currentPage = $event
-                  },
-                  "update:active-page": function($event) {
-                    _vm.currentPage = $event
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("div", [_vm._v("currentPage: " + _vm._s(_vm.currentPage))])
+              _c(
+                "CCard",
+                [
+                  _c(
+                    "CCardHeader",
+                    [
+                      _c("CIcon", { attrs: { name: "cil-justify-center" } }),
+                      _vm._v(" "),
+                      _c("strong", [_vm._v(" Jumbotron ")]),
+                      _vm._v(" "),
+                      _c("small", [_vm._v("colors")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "CCardBody",
+                    [
+                      _c(
+                        "CJumbotron",
+                        {
+                          attrs: {
+                            color: "info",
+                            "text-color": "white",
+                            "border-color": "dark"
+                          }
+                        },
+                        [
+                          _c("h1", { staticClass: "display-3" }, [
+                            _vm._v("Bootstrap 4")
+                          ]),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "lead" }, [
+                            _vm._v(
+                              "\n              This is a simple hero unit, a simple jumbotron-style component for\n              calling extra attention to featured content or information.\n            "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("hr", { staticClass: "my-4" }),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n              It uses utility classes for typography and spacing to space content\n              out within the larger container.\n            "
+                            )
+                          ])
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
             ],
             1
           )
