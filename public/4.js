@@ -383,6 +383,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _base_Table_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../base/Table.vue */ "../coreui/src/views/base/Table.vue");
 /* harmony import */ var _users_UsersData__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../users/UsersData */ "../coreui/src/views/users/UsersData.js");
 /* harmony import */ var _layout_Modal_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../layout/Modal.vue */ "../coreui/src/views/layout/Modal.vue");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -633,15 +650,30 @@ __webpack_require__.r(__webpack_exports__);
     Modal: _layout_Modal_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   },
   data: function data() {
-    return {
+    var _ref;
+
+    return _ref = {
+      file: '',
+      kategori: null,
       editorData: '<p>Content of the editor.</p>',
       editorConfig: {// The configuration of the editor.
       },
       showModal: false,
-      showModal1: false,
+      apaini: false,
+      modalhapus: false,
       foto_produk1: '',
       id_kategori1: '1',
       serch: '',
+      nama_produk: '',
+      nama_produk1: '',
+      id_produk: '',
+      id_produk1: '',
+      editor: '',
+      updateValue: '',
+      deskripsi: '',
+      deskripsi1: '',
+      berat: '',
+      berat1: '',
       nama_kategori1: '',
       jenis_kategori1: '',
       status: '',
@@ -649,20 +681,44 @@ __webpack_require__.r(__webpack_exports__);
       harga: '',
       harga1: '',
       userInfo: [],
-      jenis_kategori: '',
-      nama_kategori: '',
-      message: '',
-      dismissSecs: 7,
-      dismissCountDown: 0,
-      showDismissibleAlert: false
-    };
+      jenis_kategori: ''
+    }, _defineProperty(_ref, "jenis_kategori", ''), _defineProperty(_ref, "message", ''), _defineProperty(_ref, "dismissSecs", 7), _defineProperty(_ref, "dismissCountDown", 0), _defineProperty(_ref, "showDismissibleAlert", false), _ref;
   },
   created: function created() {
     this.getKategori();
   },
   methods: {
+    getphoto: function getphoto() {
+      return '/foto_produk/';
+    },
+    onChangeSite: function onChangeSite(e) {
+      this.kategori = e.target.value;
+    },
+    onChangeSite1: function onChangeSite1(e) {
+      this.status = e.target.value;
+    },
+    onChangeSitestatus1: function onChangeSitestatus1(e) {
+      this.status1 = e.target.value;
+    },
+    onChangeSitekategori1: function onChangeSitekategori1(e) {
+      this.kategori1 = e.target.value;
+    },
+    handleFileUpload: function handleFileUpload() {
+      this.file = event.target.files[0];
+    },
     closemodal1: function closemodal1() {
+      this.showModal1 = false;
+    },
+    closemodal: function closemodal() {
       this.showModal = false;
+      this.nama_produk1 = null;
+      this.jenis_kategori1 = null;
+      this.status1 = null;
+      this.harga1 = null;
+      this.berat1 = null;
+      this.foto_produk1 = null;
+      this.deskripsi1 = null;
+      this.apaini = false;
       this.showModal1 = false;
     },
     shuffleArray: function shuffleArray(array) {
@@ -682,23 +738,25 @@ __webpack_require__.r(__webpack_exports__);
     edit: function edit(id) {
       var _this = this;
 
-      this.showModal1 = true;
-      this.id_kategori1 = id;
-      this.nama_produk1 = null;
-      this.jenis_kategori1 = null;
-      this.status1 = null;
-      this.harga1 = null;
-      this.berat1 = null;
-      this.foto_produk1 = null;
-      this.deskripsi1 = null;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/produk/show/' + id + '?token=' + localStorage.getItem("api_token")).then(function (response) {
+      this.apaini = true;
+      this.nama_produk1 = '';
+      this.jenis_kategori1 = '';
+      this.status1 = '';
+      this.harga1 = '';
+      this.berat1 = '';
+      this.foto_produk1 = '';
+      this.deskripsi1 = '';
+      this.id_produk1 = id;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(this.$apiAdress + '/api/produk/show/' + id + '?token=' + localStorage.getItem("api_token")).then(function (response) {
         _this.nama_produk1 = response.data.nama_produk;
-        _this.jenis_kategori1 = response.data.jenis_kategori;
-        _this.status1 = response.data.status;
+        _this.file = response.data.foto_produk;
+        _this.foto_produk1 = response.data.foto_produk;
         _this.harga1 = response.data.harga;
         _this.berat1 = response.data.berat;
-        _this.foto_produk1 = response.data.foto_produk;
         _this.deskripsi1 = response.data.deskripsi;
+        _this.apaini = true;
+      })["catch"](function (error) {
+        console.log(error);
       });
     },
     refreshdata: function refreshdata() {
@@ -717,42 +775,40 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         return console.log(error);
       });
+      console.log(this.userInfo);
       return this.userInfo;
     },
     goBack: function goBack() {
       this.$router.go(-1); // this.$router.replace({path: '/users'})
     },
-    storeedit: function storeedit(id_kategori1) {
+    storeedit: function storeedit(id) {
       var _this3 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/produk/update/' + id_kategori1 + '?token=' + localStorage.getItem("api_token"), {
-        id_kategori: id_kategori1,
-        nama_kategori: this.nama_kategori1,
-        jenis_kategori: this.jenis_kategori1
+      var formData = new FormData();
+      console.log(this.status);
+      formData.append('foto_produk', this.file);
+      formData.append('nama_produk', this.nama_produk1);
+      formData.append('deskripsi', this.deskripsi1);
+      formData.append('status', this.status1);
+      formData.append('kategori', this.kategori);
+      formData.append('harga', this.harga1);
+      formData.append('berat', this.berat1);
+      formData.append('id_produk', this.id_produk1);
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(this.$apiAdress + '/api/produk/update/' + this.id_produk1 + '?token=' + localStorage.getItem("api_token"), formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
       }).then(function (response) {
         _this3.message = 'Data sudah diedit';
 
         _this3.showAlert();
 
         _this3.getKategori();
-      })["catch"](function (error) {
-        return console.log(error);
-      });
-      document.getElementById('editform').style.display = 'none';
-    },
-    store: function store() {
-      var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(this.$apiAdress + '/api/produk/store?token=' + localStorage.getItem("api_token"), {
-        'name': self.name,
-        'jenis_kategori': self.jenis_kategori,
-        'nama_kategori': self.nama_kategori
-      }).then(function (response) {
-        self.name = '';
-        self.message = 'Successfully created note.';
-        self.showAlert();
+
+        _this3.closemodal();
       })["catch"](function (error) {
         if (error.response.data.message == 'The given data was invalid.') {
-          self.message = '';
+          alert('Terjadi kesalahan input data.');
 
           for (var key in error.response.data.errors) {
             if (error.response.data.errors.hasOwnProperty(key)) {
@@ -760,12 +816,52 @@ __webpack_require__.r(__webpack_exports__);
             }
           }
 
+          self.showModal1 = false;
           self.showAlert();
         } else {
           console.log(error);
-          self.$router.push({
-            path: 'login'
-          });
+          alert('Terjadi kesalahan');
+        }
+      });
+      document.getElementById('editform').style.display = 'none';
+    },
+    tambahProduk: function tambahProduk() {
+      var formData = new FormData();
+      console.log(this.status);
+      formData.append('foto_produk', this.file);
+      formData.append('nama_produk', this.nama_produk);
+      formData.append('deskripsi', this.deskripsi);
+      formData.append('status', this.status);
+      formData.append('kategori', this.kategori);
+      formData.append('harga', this.harga);
+      formData.append('berat', this.berat);
+      console.log(formData);
+      var self = this;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(this.$apiAdress + '/api/produk/store?token=' + localStorage.getItem("api_token"), formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }).then(function (response) {
+        self.name = '';
+        self.message = 'Sukses Menambahkan Data.';
+        self.showAlert();
+        self.showModal = false;
+        self.getKategori();
+      })["catch"](function (error) {
+        if (error.response.data.message == 'The given data was invalid.') {
+          self.message = 'Terjadi kesalahan input data.';
+
+          for (var key in error.response.data.errors) {
+            if (error.response.data.errors.hasOwnProperty(key)) {
+              self.message += error.response.data.errors[key][0] + '  ';
+            }
+          }
+
+          self.showModal = false;
+          self.showAlert();
+        } else {
+          console.log(error);
+          alert('Terjadi kesalahan');
         }
       });
       self.getKategori();
@@ -777,8 +873,12 @@ __webpack_require__.r(__webpack_exports__);
       this.dismissCountDown = this.dismissSecs;
     },
     hapususer: function hapususer(id) {
+      this.modalhapus = true;
+      this.id_produkingindihapus = id;
+    },
+    hapusproduk: function hapusproduk(id) {
       var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(this.$apiAdress + '/api/produk/destroy/' + id + '?token=' + localStorage.getItem("api_token")).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(this.$apiAdress + '/api/produk/destroy/' + this.id_produkingindihapus + '?token=' + localStorage.getItem("api_token")).then(function (response) {
         self.message = 'Data Terhapus.';
         self.showAlert();
         self.getKategori();
@@ -788,6 +888,7 @@ __webpack_require__.r(__webpack_exports__);
           path: 'login'
         });
       });
+      this.modalhapus = false;
     },
     getBadge: function getBadge(success) {
       return success === 'Active' ? 'success' : success === 'Inactive' ? 'secondary' : success === 'Pending' ? 'warning' : success === 'Draft' ? 'secondary' : success === 'Banned' ? 'danger' : 'primary';
@@ -956,137 +1057,504 @@ var render = function() {
   return _c(
     "CRow",
     [
-      _c(
-        "CCol",
-        { staticStyle: { display: "none" }, attrs: { col: "12", lg: "12" } },
-        [
-          _c(
-            "CCard",
-            { attrs: { "no-header": "" } },
-            [
-              _c(
-                "CCardBody",
-                [
-                  _c("h3", [_vm._v("\n          Edit Kategori\n        ")]),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "ID Kategori",
-                      type: "number",
-                      placeholder: "ID kategori"
-                    },
-                    model: {
-                      value: _vm.id_kategori1,
-                      callback: function($$v) {
-                        _vm.id_kategori1 = $$v
-                      },
-                      expression: "id_kategori1"
+      _c("modal", {
+        attrs: { show: _vm.showModal, name: "modal", id: "modal" },
+        on: {
+          close: function($event) {
+            _vm.showModal = false
+          }
+        },
+        scopedSlots: _vm._u([
+          {
+            key: "header",
+            fn: function() {
+              return [
+                _c("h3", [_vm._v("Tambah")]),
+                _vm._v(" "),
+                _c(
+                  "CButton",
+                  {
+                    attrs: { color: "danger" },
+                    on: {
+                      click: function($event) {
+                        return _vm.closemodal()
+                      }
                     }
-                  }),
-                  _vm._v(" "),
-                  _c("CInput", {
-                    attrs: {
-                      label: "Nama Kategori",
-                      type: "text",
-                      placeholder: "Nama kategori"
-                    },
-                    model: {
-                      value: _vm.nama_kategori1,
-                      callback: function($$v) {
-                        _vm.nama_kategori1 = $$v
+                  },
+                  [_vm._v("X")]
+                )
+              ]
+            },
+            proxy: true
+          },
+          {
+            key: "body",
+            fn: function() {
+              return [
+                _c(
+                  "CRow",
+                  { staticClass: "inline-block mb-3" },
+                  [
+                    _c(
+                      "CCard",
+                      {
+                        staticClass: "inline-block",
+                        attrs: { "no-header": "" }
                       },
-                      expression: "nama_kategori1"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "select",
-                    {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.jenis_kategori1,
-                          expression: "jenis_kategori1"
-                        }
+                      [
+                        _c(
+                          "CCardBody",
+                          [
+                            _c("CForm", [
+                              _c("div", { staticClass: "mb-3" }, [
+                                _c(
+                                  "label",
+                                  {
+                                    staticStyle: { "font-weight": "bold" },
+                                    attrs: { name: "1" }
+                                  },
+                                  [_vm._v("Nama Produk")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.nama_produk,
+                                      expression: "nama_produk"
+                                    }
+                                  ],
+                                  staticClass: "form-control form-inline",
+                                  staticStyle: { width: "100%" },
+                                  attrs: { type: "email" },
+                                  domProps: { value: _vm.nama_produk },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.nama_produk = $event.target.value
+                                    }
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "mb-3" },
+                                [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticStyle: { "font-weight": "bold" },
+                                      attrs: { name: "2" }
+                                    },
+                                    [_vm._v("Deskripsi")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("ckeditor", {
+                                    attrs: { editor: _vm.editor },
+                                    on: { change: _vm.updateValue },
+                                    model: {
+                                      value: _vm.deskripsi,
+                                      callback: function($$v) {
+                                        _vm.deskripsi = $$v
+                                      },
+                                      expression: "deskripsi"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ])
+                          ],
+                          1
+                        )
                       ],
-                      staticClass: "mb-3 form-control",
-                      attrs: {
-                        size: "lg",
-                        "aria-label": "Large select example"
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "CCard",
+                      {
+                        staticClass: "inline-block",
+                        staticStyle: { "margin-left": "30px" },
+                        attrs: { "no-header": "" }
                       },
-                      on: {
-                        change: function($event) {
-                          var $$selectedVal = Array.prototype.filter
-                            .call($event.target.options, function(o) {
-                              return o.selected
-                            })
-                            .map(function(o) {
-                              var val = "_value" in o ? o._value : o.value
-                              return val
-                            })
-                          _vm.jenis_kategori1 = $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        }
+                      [
+                        _c(
+                          "CCardBody",
+                          [
+                            _c("CForm", [
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "mb-3",
+                                  staticStyle: { margin: "auto" }
+                                },
+                                [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticStyle: { "font-weight": "bold" },
+                                      attrs: { name: "3" }
+                                    },
+                                    [_vm._v("Status")]
+                                  ),
+                                  _c("br"),
+                                  _vm._v(" "),
+                                  _c(
+                                    "Select",
+                                    {
+                                      staticClass: "form-control form-inline",
+                                      staticStyle: { width: "100%" },
+                                      attrs: {
+                                        name: "status",
+                                        "aria-label": "Large select example",
+                                        id: ""
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          return _vm.onChangeSite1($event)
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("option", { attrs: { value: "" } }, [
+                                        _vm._v("Pilih Salah Satu")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "Draft" } },
+                                        [_vm._v("Draft")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "Rilis" } },
+                                        [_vm._v("Rilis")]
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "mb-3" },
+                                [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticStyle: { "font-weight": "bold" },
+                                      attrs: { name: "4" }
+                                    },
+                                    [_vm._v("Kategori")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "Select",
+                                    {
+                                      staticClass: "form-control form-inline",
+                                      staticStyle: { width: "100%" },
+                                      attrs: {
+                                        name: "kategori",
+                                        "aria-label": "Large select example",
+                                        id: ""
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          return _vm.onChangeSite($event)
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("option", { attrs: { value: "" } }, [
+                                        _vm._v("Pilih Salah Satu")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "Elektronik" } },
+                                        [_vm._v("Elektronik")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "Komputer" } },
+                                        [_vm._v("Komputer")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "Lain-lain" } },
+                                        [_vm._v("Lain-lain")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "option",
+                                        { attrs: { value: "Smartphone" } },
+                                        [_vm._v("Smartphone")]
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "mb-3" }, [
+                                _c(
+                                  "label",
+                                  {
+                                    staticStyle: { "font-weight": "bold" },
+                                    attrs: { name: "5" }
+                                  },
+                                  [_vm._v("Harga")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.harga,
+                                      expression: "harga"
+                                    }
+                                  ],
+                                  staticClass: "form-control form-inline",
+                                  staticStyle: { width: "100%" },
+                                  attrs: { type: "number" },
+                                  domProps: { value: _vm.harga },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.harga = $event.target.value
+                                    }
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "mb-3" }, [
+                                _c(
+                                  "label",
+                                  {
+                                    staticStyle: { "font-weight": "bold" },
+                                    attrs: { name: "6" }
+                                  },
+                                  [_vm._v("Berat")]
+                                ),
+                                _vm._v("\n                              <"),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.berat,
+                                      expression: "berat"
+                                    }
+                                  ],
+                                  staticClass: "form-control form-inline",
+                                  staticStyle: { width: "100%" },
+                                  attrs: { type: "number" },
+                                  domProps: { value: _vm.berat },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.berat = $event.target.value
+                                    }
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "mb-3" }, [
+                                _c(
+                                  "label",
+                                  {
+                                    staticStyle: { "font-weight": "bold" },
+                                    attrs: { name: "7" }
+                                  },
+                                  [_vm._v("Foto Produk")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  staticClass: "form-control-file",
+                                  staticStyle: { width: "100%" },
+                                  attrs: {
+                                    type: "file",
+                                    accept: "image/png, image/gif, image/jpeg"
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      return _vm.handleFileUpload($event)
+                                    }
+                                  }
+                                })
+                              ])
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ]
+            },
+            proxy: true
+          },
+          {
+            key: "footer",
+            fn: function() {
+              return [
+                _c(
+                  "CButton",
+                  {
+                    attrs: { color: "primary" },
+                    on: {
+                      click: function($event) {
+                        return _vm.tambahProduk()
                       }
-                    },
-                    [
-                      _c("option", { attrs: { value: "Elektronik" } }, [
-                        _vm._v("Elektronik")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "Komputer" } }, [
-                        _vm._v("Komputer")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "Lain-lain" } }, [
-                        _vm._v("Lain-lain")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "Smartphone" } }, [
-                        _vm._v("Smartphone")
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "CButton",
-                    {
-                      attrs: { color: "primary" },
-                      on: {
-                        click: function($event) {
-                          return _vm.storeedit(_vm.id_kategori1)
-                        }
+                    }
+                  },
+                  [_vm._v("Tambah")]
+                )
+              ]
+            },
+            proxy: true
+          }
+        ])
+      }),
+      _vm._v(" "),
+      _c("modal", {
+        attrs: { show: _vm.modalhapus, name: "modalhapus", id: "modalhapus" },
+        on: {
+          close: function($event) {
+            _vm.modalhapus = false
+          }
+        },
+        scopedSlots: _vm._u([
+          {
+            key: "header",
+            fn: function() {
+              return [
+                _c("h3", [_vm._v("Hapus")]),
+                _vm._v(" "),
+                _c(
+                  "CButton",
+                  {
+                    attrs: { color: "danger" },
+                    on: {
+                      click: function($event) {
+                        return _vm.closemodalhapus()
                       }
-                    },
-                    [_vm._v("Update")]
+                    }
+                  },
+                  [_vm._v("X")]
+                )
+              ]
+            },
+            proxy: true
+          },
+          {
+            key: "body",
+            fn: function() {
+              return [
+                _c("CRow", { staticClass: "inline-block mb-3" }, [
+                  _vm._v(
+                    "\n                    Apakah ingin menghapus produk ini?\n\n                    "
                   )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
+                ])
+              ]
+            },
+            proxy: true
+          },
+          {
+            key: "footer",
+            fn: function() {
+              return [
+                _c(
+                  "CButton",
+                  {
+                    attrs: { color: "danger" },
+                    on: {
+                      click: function($event) {
+                        return _vm.hapusproduk()
+                      }
+                    }
+                  },
+                  [_vm._v("Hapus")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "CButton",
+                  {
+                    attrs: { color: "primary" },
+                    on: {
+                      click: function($event) {
+                        _vm.modalhapus = false
+                      }
+                    }
+                  },
+                  [_vm._v("Batal")]
+                )
+              ]
+            },
+            proxy: true
+          }
+        ])
+      }),
       _vm._v(" "),
       _c(
         "CCol",
         { attrs: { col: "12", lg: "12" } },
         [
+          _c("h3", [_vm._v("Produk")]),
+          _vm._v(" "),
           _c(
             "CCard",
             { attrs: { "no-header": "" } },
             [
               _c("CCardBody", [
                 _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-md-4 mb-2" }, [
-                    _c(
-                      "div",
-                      { staticClass: "form-inline" },
-                      [
+                  _c(
+                    "div",
+                    { staticClass: "col-md-4 mb-2" },
+                    [
+                      _c(
+                        "CAlert",
+                        {
+                          attrs: {
+                            show: _vm.dismissCountDown,
+                            color: "primary",
+                            fade: ""
+                          },
+                          on: {
+                            "update:show": function($event) {
+                              _vm.dismissCountDown = $event
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n          (" +
+                              _vm._s(_vm.dismissCountDown) +
+                              ") " +
+                              _vm._s(_vm.message) +
+                              "\n          "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-inline" }, [
                         _c("button", { staticClass: "btn btn-danger" }, [
                           _vm._v("Mass Upload")
                         ]),
@@ -1103,522 +1571,11 @@ var render = function() {
                             }
                           },
                           [_vm._v("Tambah")]
-                        ),
-                        _vm._v(" "),
-                        _c("modal", {
-                          attrs: { show: _vm.showModal },
-                          on: {
-                            close: function($event) {
-                              _vm.showModal = false
-                            }
-                          },
-                          scopedSlots: _vm._u([
-                            {
-                              key: "header",
-                              fn: function() {
-                                return [
-                                  _c("h3", [_vm._v("Tambah")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "CButton",
-                                    {
-                                      attrs: { color: "danger" },
-                                      on: {
-                                        click: function($event) {
-                                          return _vm.closemodal1()
-                                        }
-                                      }
-                                    },
-                                    [_vm._v("X")]
-                                  )
-                                ]
-                              },
-                              proxy: true
-                            },
-                            {
-                              key: "body",
-                              fn: function() {
-                                return [
-                                  _c(
-                                    "CRow",
-                                    { staticClass: "inline-block mb-3" },
-                                    [
-                                      _c(
-                                        "CCard",
-                                        {
-                                          staticClass: "inline-block",
-                                          attrs: { "no-header": "" }
-                                        },
-                                        [
-                                          _c(
-                                            "CCardBody",
-                                            [
-                                              _c("CForm", [
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "mb-3" },
-                                                  [
-                                                    _c(
-                                                      "CFormLabel",
-                                                      {
-                                                        staticStyle: {
-                                                          "font-weight": "bold"
-                                                        },
-                                                        attrs: {
-                                                          for:
-                                                            "exampleFormControlTextarea1"
-                                                        }
-                                                      },
-                                                      [_vm._v("Nama Produk")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c("input", {
-                                                      directives: [
-                                                        {
-                                                          name: "model",
-                                                          rawName: "v-model",
-                                                          value:
-                                                            _vm.nama_produk,
-                                                          expression:
-                                                            "nama_produk"
-                                                        }
-                                                      ],
-                                                      staticClass:
-                                                        "form-control form-inline",
-                                                      staticStyle: {
-                                                        width: "100%"
-                                                      },
-                                                      attrs: { type: "email" },
-                                                      domProps: {
-                                                        value: _vm.nama_produk
-                                                      },
-                                                      on: {
-                                                        input: function(
-                                                          $event
-                                                        ) {
-                                                          if (
-                                                            $event.target
-                                                              .composing
-                                                          ) {
-                                                            return
-                                                          }
-                                                          _vm.nama_produk =
-                                                            $event.target.value
-                                                        }
-                                                      }
-                                                    })
-                                                  ],
-                                                  1
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "mb-3" },
-                                                  [
-                                                    _c(
-                                                      "CFormLabel",
-                                                      {
-                                                        staticStyle: {
-                                                          "font-weight": "bold"
-                                                        },
-                                                        attrs: {
-                                                          for:
-                                                            "exampleFormControlTextarea1"
-                                                        }
-                                                      },
-                                                      [_vm._v("Deskripsi")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c("ckeditor", {
-                                                      attrs: {
-                                                        editor: _vm.editor
-                                                      },
-                                                      on: {
-                                                        change: _vm.updateValue
-                                                      },
-                                                      model: {
-                                                        value: _vm.deskripsi,
-                                                        callback: function(
-                                                          $$v
-                                                        ) {
-                                                          _vm.deskripsi = $$v
-                                                        },
-                                                        expression: "deskripsi"
-                                                      }
-                                                    })
-                                                  ],
-                                                  1
-                                                )
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "CCard",
-                                        {
-                                          staticClass: "inline-block",
-                                          staticStyle: {
-                                            "margin-left": "30px"
-                                          },
-                                          attrs: { "no-header": "" }
-                                        },
-                                        [
-                                          _c(
-                                            "CCardBody",
-                                            [
-                                              _c("CForm", [
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass: "mb-3",
-                                                    staticStyle: {
-                                                      margin: "auto"
-                                                    }
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "CFormLabel",
-                                                      {
-                                                        staticStyle: {
-                                                          "font-weight": "bold"
-                                                        },
-                                                        attrs: {
-                                                          for:
-                                                            "exampleFormControlTextarea1"
-                                                        }
-                                                      },
-                                                      [_vm._v("Status")]
-                                                    ),
-                                                    _c("br"),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "Select",
-                                                      {
-                                                        staticClass:
-                                                          "form-control form-inline",
-                                                        staticStyle: {
-                                                          width: "100%"
-                                                        },
-                                                        attrs: {
-                                                          "aria-label":
-                                                            "Large select example"
-                                                        },
-                                                        model: {
-                                                          value: _vm.status,
-                                                          callback: function(
-                                                            $$v
-                                                          ) {
-                                                            _vm.status = $$v
-                                                          },
-                                                          expression: "status"
-                                                        }
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "option",
-                                                          {
-                                                            attrs: {
-                                                              value: "Draft"
-                                                            }
-                                                          },
-                                                          [_vm._v("Draft")]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "option",
-                                                          {
-                                                            attrs: {
-                                                              value: "Rilis"
-                                                            }
-                                                          },
-                                                          [_vm._v("Rilis")]
-                                                        )
-                                                      ]
-                                                    )
-                                                  ],
-                                                  1
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "mb-3" },
-                                                  [
-                                                    _c(
-                                                      "CFormLabel",
-                                                      {
-                                                        staticStyle: {
-                                                          "font-weight": "bold"
-                                                        },
-                                                        attrs: {
-                                                          for:
-                                                            "exampleFormControlTextarea1"
-                                                        }
-                                                      },
-                                                      [_vm._v("Kategori")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "Select",
-                                                      {
-                                                        staticClass:
-                                                          "form-control form-inline",
-                                                        staticStyle: {
-                                                          width: "100%"
-                                                        },
-                                                        attrs: {
-                                                          "aria-label":
-                                                            "Large select example"
-                                                        },
-                                                        model: {
-                                                          value: _vm.status,
-                                                          callback: function(
-                                                            $$v
-                                                          ) {
-                                                            _vm.status = $$v
-                                                          },
-                                                          expression: "status"
-                                                        }
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "option",
-                                                          {
-                                                            attrs: {
-                                                              value:
-                                                                "Elektronik"
-                                                            }
-                                                          },
-                                                          [_vm._v("Elektronik")]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "option",
-                                                          {
-                                                            attrs: {
-                                                              value: "Komputer"
-                                                            }
-                                                          },
-                                                          [_vm._v("Komputer")]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "option",
-                                                          {
-                                                            attrs: {
-                                                              value: "Lain-lain"
-                                                            }
-                                                          },
-                                                          [_vm._v("Lain-lain")]
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "option",
-                                                          {
-                                                            attrs: {
-                                                              value:
-                                                                "Smartphone"
-                                                            }
-                                                          },
-                                                          [_vm._v("Smartphone")]
-                                                        )
-                                                      ]
-                                                    )
-                                                  ],
-                                                  1
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "mb-3" },
-                                                  [
-                                                    _c(
-                                                      "CFormLabel",
-                                                      {
-                                                        staticStyle: {
-                                                          "font-weight": "bold"
-                                                        },
-                                                        attrs: {
-                                                          for:
-                                                            "exampleFormControlTextarea1"
-                                                        }
-                                                      },
-                                                      [_vm._v("Harga")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c("input", {
-                                                      directives: [
-                                                        {
-                                                          name: "model",
-                                                          rawName: "v-model",
-                                                          value: _vm.harga,
-                                                          expression: "harga"
-                                                        }
-                                                      ],
-                                                      staticClass:
-                                                        "form-control form-inline",
-                                                      staticStyle: {
-                                                        width: "100%"
-                                                      },
-                                                      attrs: { type: "email" },
-                                                      domProps: {
-                                                        value: _vm.harga
-                                                      },
-                                                      on: {
-                                                        input: function(
-                                                          $event
-                                                        ) {
-                                                          if (
-                                                            $event.target
-                                                              .composing
-                                                          ) {
-                                                            return
-                                                          }
-                                                          _vm.harga =
-                                                            $event.target.value
-                                                        }
-                                                      }
-                                                    })
-                                                  ],
-                                                  1
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "mb-3" },
-                                                  [
-                                                    _c(
-                                                      "CFormLabel",
-                                                      {
-                                                        staticStyle: {
-                                                          "font-weight": "bold"
-                                                        },
-                                                        attrs: {
-                                                          for:
-                                                            "exampleFormControlTextarea1"
-                                                        }
-                                                      },
-                                                      [_vm._v("Berat")]
-                                                    ),
-                                                    _vm._v(
-                                                      "\n                              <"
-                                                    ),
-                                                    _c("input", {
-                                                      directives: [
-                                                        {
-                                                          name: "model",
-                                                          rawName: "v-model",
-                                                          value: _vm.berat,
-                                                          expression: "berat"
-                                                        }
-                                                      ],
-                                                      staticClass:
-                                                        "form-control form-inline",
-                                                      staticStyle: {
-                                                        width: "100%"
-                                                      },
-                                                      attrs: { type: "email" },
-                                                      domProps: {
-                                                        value: _vm.berat
-                                                      },
-                                                      on: {
-                                                        input: function(
-                                                          $event
-                                                        ) {
-                                                          if (
-                                                            $event.target
-                                                              .composing
-                                                          ) {
-                                                            return
-                                                          }
-                                                          _vm.berat =
-                                                            $event.target.value
-                                                        }
-                                                      }
-                                                    })
-                                                  ],
-                                                  1
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  { staticClass: "mb-3" },
-                                                  [
-                                                    _c(
-                                                      "CFormLabel",
-                                                      {
-                                                        staticStyle: {
-                                                          "font-weight": "bold"
-                                                        },
-                                                        attrs: {
-                                                          for:
-                                                            "exampleFormControlTextarea1"
-                                                        }
-                                                      },
-                                                      [_vm._v("Foto Produk")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _c("input", {
-                                                      staticClass:
-                                                        "form-control-file",
-                                                      staticStyle: {
-                                                        width: "100%"
-                                                      },
-                                                      attrs: {
-                                                        type: "file",
-                                                        accept:
-                                                          "image/png, image/gif, image/jpeg"
-                                                      },
-                                                      on: {
-                                                        change: _vm.foto_produk
-                                                      }
-                                                    })
-                                                  ],
-                                                  1
-                                                )
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ]
-                              },
-                              proxy: true
-                            },
-                            {
-                              key: "footer",
-                              fn: function() {
-                                return [
-                                  _c(
-                                    "CButton",
-                                    {
-                                      attrs: { color: "primary" },
-                                      on: {
-                                        click: function($event) {
-                                          return _vm.store()
-                                        }
-                                      }
-                                    },
-                                    [_vm._v("Tambah")]
-                                  )
-                                ]
-                              },
-                              proxy: true
-                            }
-                          ])
-                        })
-                      ],
-                      1
-                    )
-                  ]),
+                        )
+                      ])
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-4 offset-md-4" }, [
                     _c("div", { staticClass: "form-inline float-right" }, [
@@ -1676,14 +1633,7 @@ var render = function() {
                       "tbody",
                       _vm._l(_vm.userInfo, function(user, index) {
                         return _c("tr", { key: user.id }, [
-                          _c("td", [
-                            _vm._v(
-                              _vm._s(user.nama_produk) +
-                                " " +
-                                _vm._s(user.id) +
-                                " "
-                            )
-                          ]),
+                          _c("td", [_vm._v(_vm._s(user.nama_produk))]),
                           _vm._v(" "),
                           _c("td", [
                             _c("p", [_vm._v(_vm._s(user.nama_produk))]),
@@ -1695,7 +1645,7 @@ var render = function() {
                                 _c(
                                   "CBadge",
                                   { staticClass: "badge badge-warning" },
-                                  [_vm._v(_vm._s(user.nama_kategori))]
+                                  [_vm._v(_vm._s(user.jenis_kategori))]
                                 )
                               ],
                               1
@@ -1715,7 +1665,7 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(user.harga))]),
+                          _c("td", [_vm._v("Rp " + _vm._s(user.harga))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(user.created_at))]),
                           _vm._v(" "),
@@ -1773,10 +1723,10 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("modal", {
-        attrs: { show: _vm.showModal1 },
+        attrs: { show: _vm.apaini, name: "modal1", id: "modal1" },
         on: {
           close: function($event) {
-            _vm.showModal1 = false
+            _vm.apaini = false
           }
         },
         scopedSlots: _vm._u([
@@ -1784,7 +1734,7 @@ var render = function() {
             key: "header",
             fn: function() {
               return [
-                _c("h3", [_vm._v("Tambah")]),
+                _c("h3", [_vm._v("Edit")]),
                 _vm._v(" "),
                 _c(
                   "CButton",
@@ -1792,7 +1742,8 @@ var render = function() {
                     attrs: { color: "danger" },
                     on: {
                       click: function($event) {
-                        return _vm.closemodal1()
+                        $event.stopPropagation()
+                        return _vm.closemodal()
                       }
                     }
                   },
@@ -1821,58 +1772,83 @@ var render = function() {
                           "CCardBody",
                           [
                             _c("CForm", [
-                              _c(
-                                "div",
-                                { staticClass: "mb-3" },
-                                [
-                                  _c(
-                                    "CFormLabel",
+                              _c("div", { staticClass: "mb-3" }, [
+                                _c(
+                                  "label",
+                                  {
+                                    staticStyle: { "font-weight": "bold" },
+                                    attrs: { name: "8" }
+                                  },
+                                  [_vm._v("ID Produk")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
                                     {
-                                      staticStyle: { "font-weight": "bold" },
-                                      attrs: {
-                                        for: "exampleFormControlTextarea1"
-                                      }
-                                    },
-                                    [_vm._v("Nama Produk")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("input", {
-                                    directives: [
-                                      {
-                                        name: "model",
-                                        rawName: "v-model",
-                                        value: _vm.nama_produk1,
-                                        expression: "nama_produk1"
-                                      }
-                                    ],
-                                    staticClass: "form-control form-inline",
-                                    staticStyle: { width: "100%" },
-                                    attrs: { type: "email" },
-                                    domProps: { value: _vm.nama_produk1 },
-                                    on: {
-                                      input: function($event) {
-                                        if ($event.target.composing) {
-                                          return
-                                        }
-                                        _vm.nama_produk1 = $event.target.value
-                                      }
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.id_produk1,
+                                      expression: "id_produk1"
                                     }
-                                  })
-                                ],
-                                1
-                              ),
+                                  ],
+                                  staticClass: "form-control form-inline",
+                                  staticStyle: { width: "100%" },
+                                  attrs: { type: "text" },
+                                  domProps: { value: _vm.id_produk1 },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.id_produk1 = $event.target.value
+                                    }
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "mb-3" }, [
+                                _c(
+                                  "label",
+                                  {
+                                    staticStyle: { "font-weight": "bold" },
+                                    attrs: { name: "9" }
+                                  },
+                                  [_vm._v("Nama Produk")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.nama_produk1,
+                                      expression: "nama_produk1"
+                                    }
+                                  ],
+                                  staticClass: "form-control form-inline",
+                                  staticStyle: { width: "100%" },
+                                  attrs: { type: "text" },
+                                  domProps: { value: _vm.nama_produk1 },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.nama_produk1 = $event.target.value
+                                    }
+                                  }
+                                })
+                              ]),
                               _vm._v(" "),
                               _c(
                                 "div",
                                 { staticClass: "mb-3" },
                                 [
                                   _c(
-                                    "CFormLabel",
+                                    "label",
                                     {
                                       staticStyle: { "font-weight": "bold" },
-                                      attrs: {
-                                        for: "exampleFormControlTextarea1"
-                                      }
+                                      attrs: { name: "10" }
                                     },
                                     [_vm._v("Deskripsi")]
                                   ),
@@ -1919,12 +1895,10 @@ var render = function() {
                                 },
                                 [
                                   _c(
-                                    "CFormLabel",
+                                    "label",
                                     {
                                       staticStyle: { "font-weight": "bold" },
-                                      attrs: {
-                                        for: "exampleFormControlTextarea1"
-                                      }
+                                      attrs: { name: "11" }
                                     },
                                     [_vm._v("Status")]
                                   ),
@@ -1936,17 +1910,21 @@ var render = function() {
                                       staticClass: "form-control form-inline",
                                       staticStyle: { width: "100%" },
                                       attrs: {
-                                        "aria-label": "Large select example"
+                                        name: "status1",
+                                        "aria-label": "Large select example",
+                                        id: ""
                                       },
-                                      model: {
-                                        value: _vm.status1,
-                                        callback: function($$v) {
-                                          _vm.status1 = $$v
-                                        },
-                                        expression: "status1"
+                                      on: {
+                                        change: function($event) {
+                                          return _vm.onChangeSitestatus1($event)
+                                        }
                                       }
                                     },
                                     [
+                                      _c("option", { attrs: { value: "" } }, [
+                                        _vm._v("Pilih Salah Satu")
+                                      ]),
+                                      _vm._v(" "),
                                       _c(
                                         "option",
                                         { attrs: { value: "Draft" } },
@@ -1969,12 +1947,10 @@ var render = function() {
                                 { staticClass: "mb-3" },
                                 [
                                   _c(
-                                    "CFormLabel",
+                                    "label",
                                     {
                                       staticStyle: { "font-weight": "bold" },
-                                      attrs: {
-                                        for: "exampleFormControlTextarea1"
-                                      }
+                                      attrs: { name: "12" }
                                     },
                                     [_vm._v("Kategori")]
                                   ),
@@ -1985,17 +1961,23 @@ var render = function() {
                                       staticClass: "form-control form-inline",
                                       staticStyle: { width: "100%" },
                                       attrs: {
-                                        "aria-label": "Large select example"
+                                        name: "kategori1",
+                                        "aria-label": "Large select example",
+                                        id: ""
                                       },
-                                      model: {
-                                        value: _vm.nama_kategori1,
-                                        callback: function($$v) {
-                                          _vm.nama_kategori1 = $$v
-                                        },
-                                        expression: "nama_kategori1"
+                                      on: {
+                                        change: function($event) {
+                                          return _vm.onChangeSitekategori1(
+                                            $event
+                                          )
+                                        }
                                       }
                                     },
                                     [
+                                      _c("option", { attrs: { value: "" } }, [
+                                        _vm._v("Pilih Salah Satu")
+                                      ]),
+                                      _vm._v(" "),
                                       _c(
                                         "option",
                                         { attrs: { value: "Elektronik" } },
@@ -2025,115 +2007,108 @@ var render = function() {
                                 1
                               ),
                               _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "mb-3" },
-                                [
-                                  _c(
-                                    "CFormLabel",
+                              _c("div", { staticClass: "mb-3" }, [
+                                _c(
+                                  "label",
+                                  {
+                                    staticStyle: { "font-weight": "bold" },
+                                    attrs: { name: "13" }
+                                  },
+                                  [_vm._v("Harga")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
                                     {
-                                      staticStyle: { "font-weight": "bold" },
-                                      attrs: {
-                                        for: "exampleFormControlTextarea1"
-                                      }
-                                    },
-                                    [_vm._v("Harga")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("input", {
-                                    directives: [
-                                      {
-                                        name: "model",
-                                        rawName: "v-model",
-                                        value: _vm.harga1,
-                                        expression: "harga1"
-                                      }
-                                    ],
-                                    staticClass: "form-control form-inline",
-                                    staticStyle: { width: "100%" },
-                                    attrs: { type: "email" },
-                                    domProps: { value: _vm.harga1 },
-                                    on: {
-                                      input: function($event) {
-                                        if ($event.target.composing) {
-                                          return
-                                        }
-                                        _vm.harga1 = $event.target.value
-                                      }
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.harga1,
+                                      expression: "harga1"
                                     }
-                                  })
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "mb-3" },
-                                [
-                                  _c(
-                                    "CFormLabel",
-                                    {
-                                      staticStyle: { "font-weight": "bold" },
-                                      attrs: {
-                                        for: "exampleFormControlTextarea1"
+                                  ],
+                                  staticClass: "form-control form-inline",
+                                  staticStyle: { width: "100%" },
+                                  attrs: { type: "text" },
+                                  domProps: { value: _vm.harga1 },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
                                       }
-                                    },
-                                    [_vm._v("Berat")]
-                                  ),
-                                  _vm._v("\n                              <"),
-                                  _c("input", {
-                                    directives: [
-                                      {
-                                        name: "model",
-                                        rawName: "v-model",
-                                        value: _vm.berat1,
-                                        expression: "berat1"
-                                      }
-                                    ],
-                                    staticClass: "form-control form-inline",
-                                    staticStyle: { width: "100%" },
-                                    attrs: { type: "email" },
-                                    domProps: { value: _vm.berat1 },
-                                    on: {
-                                      input: function($event) {
-                                        if ($event.target.composing) {
-                                          return
-                                        }
-                                        _vm.berat1 = $event.target.value
-                                      }
+                                      _vm.harga1 = $event.target.value
                                     }
-                                  })
-                                ],
-                                1
-                              ),
+                                  }
+                                })
+                              ]),
                               _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "mb-3" },
-                                [
-                                  _c(
-                                    "CFormLabel",
+                              _c("div", { staticClass: "mb-3" }, [
+                                _c(
+                                  "label",
+                                  {
+                                    staticStyle: { "font-weight": "bold" },
+                                    attrs: { name: "14" }
+                                  },
+                                  [_vm._v("Berat")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
                                     {
-                                      staticStyle: { "font-weight": "bold" },
-                                      attrs: {
-                                        for: "exampleFormControlTextarea1"
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.berat1,
+                                      expression: "berat1"
+                                    }
+                                  ],
+                                  staticClass: "form-control form-inline",
+                                  staticStyle: { width: "100%" },
+                                  attrs: { type: "text" },
+                                  domProps: { value: _vm.berat1 },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
                                       }
-                                    },
-                                    [_vm._v("Foto Produk")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("input", {
-                                    staticClass: "form-control-file",
-                                    staticStyle: { width: "100%" },
-                                    attrs: {
-                                      type: "file",
-                                      accept: "image/png, image/gif, image/jpeg"
-                                    },
-                                    on: { change: _vm.foto_produk1 }
-                                  })
-                                ],
-                                1
-                              )
+                                      _vm.berat1 = $event.target.value
+                                    }
+                                  }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "mb-3" }, [
+                                _c(
+                                  "label",
+                                  {
+                                    staticStyle: { "font-weight": "bold" },
+                                    attrs: { name: "15" }
+                                  },
+                                  [_vm._v("Foto Produk")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  staticClass: "form-control-file",
+                                  staticStyle: { width: "100%" },
+                                  attrs: {
+                                    type: "file",
+                                    accept: "image/png, image/gif, image/jpeg"
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      return _vm.handleFileUpload($event)
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("img", {
+                                  staticStyle: {
+                                    width: "100px",
+                                    height: "100px"
+                                  },
+                                  attrs: {
+                                    src: _vm.getphoto() + _vm.foto_produk1
+                                  }
+                                })
+                              ])
                             ])
                           ],
                           1
@@ -2158,11 +2133,11 @@ var render = function() {
                     attrs: { color: "primary" },
                     on: {
                       click: function($event) {
-                        return _vm.store()
+                        return _vm.storeedit(_vm.id)
                       }
                     }
                   },
-                  [_vm._v("Tambah")]
+                  [_vm._v("Update")]
                 )
               ]
             },
@@ -2277,56 +2252,70 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Transition", { attrs: { name: "modal" } }, [
-    _vm.show
-      ? _c("div", { staticClass: "modal-mask" }, [
-          _c("div", { staticClass: "modal-wrapper" }, [
-            _c("div", { staticClass: "modal-container" }, [
-              _c(
-                "div",
-                { staticClass: "modal-header" },
-                [_vm._t("header", [_vm._v("default header")])],
-                2
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "modal-body" },
-                [
-                  _vm._t("body", [
-                    _vm._v("\n          default body\n          ")
-                  ])
-                ],
-                2
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "modal-footer" },
-                [
-                  _vm._t("footer", [
-                    _vm._v("\n            default footer\n            "),
-                    _c(
-                      "button",
-                      {
-                        staticClass: "modal-default-button",
-                        on: {
-                          click: function($event) {
-                            return _vm.$emit("close")
+  return _c(
+    "Transition",
+    {
+      attrs: { name: "modal" },
+      on: {
+        click: function($event) {
+          if ($event.target !== $event.currentTarget) {
+            return null
+          }
+          return _vm.close($event)
+        }
+      }
+    },
+    [
+      _vm.show
+        ? _c("div", { staticClass: "modal-mask" }, [
+            _c("div", { staticClass: "modal-wrapper" }, [
+              _c("div", { staticClass: "modal-container" }, [
+                _c(
+                  "div",
+                  { staticClass: "modal-header" },
+                  [_vm._t("header", [_vm._v("default header")])],
+                  2
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "modal-body" },
+                  [
+                    _vm._t("body", [
+                      _vm._v("\n          default body\n          ")
+                    ])
+                  ],
+                  2
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "modal-footer" },
+                  [
+                    _vm._t("footer", [
+                      _vm._v("\n            default footer\n            "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "modal-default-button",
+                          on: {
+                            click: function($event) {
+                              return _vm.$emit("close")
+                            }
                           }
-                        }
-                      },
-                      [_vm._v("OK")]
-                    )
-                  ])
-                ],
-                2
-              )
+                        },
+                        [_vm._v("OK")]
+                      )
+                    ])
+                  ],
+                  2
+                )
+              ])
             ])
           ])
-        ])
-      : _vm._e()
-  ])
+        : _vm._e()
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

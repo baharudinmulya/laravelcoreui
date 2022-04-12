@@ -382,6 +382,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -595,6 +599,10 @@ var render = function() {
   return _c(
     "CRow",
     [
+      _c("CCol", { attrs: { col: "12", lg: "12" } }, [
+        _c("h3", [_vm._v("Kategori")])
+      ]),
+      _vm._v(" "),
       _c(
         "CCol",
         { attrs: { col: "6", lg: "6" } },

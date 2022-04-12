@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\Kategori;
 use App\Models\Produk;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use File;
 
 class ProdukController extends Controller
 {
@@ -23,6 +25,7 @@ class ProdukController extends Controller
         ->orWhere('kategori_id', 'LIKE', '%'.$request->q.'%')
         ->orWhere('berat', 'LIKE', '%'.$request->q.'%')
         ->orWhere('deskripsi', 'LIKE', '%'.$request->q.'%')
+        ->orderBy('produk.id', 'asc')
         ->get()
         ;
         // dd($produk);
@@ -30,7 +33,8 @@ class ProdukController extends Controller
         }
         else{
         $produk = Produk::join('kategori', 'kategori.id', '=', 'produk.kategori_id')
-        ->get(['produk.*','kategori.nama_kategori']);
+        ->orderBy('produk.id', 'asc')
+        ->get(['produk.*','kategori.jenis_kategori']);
         return response()->json($produk);
         }
     }
@@ -53,7 +57,24 @@ class ProdukController extends Controller
      */
     public function store(Request $request)
     {
-        Kategori::create($request->all());
+        $validatedData = $request->validate([
+            'nama_produk' => 'required|min:1|max:64',
+            'harga' => 'required|min:1|max:64',
+            'status' => 'required|min:1|max:64',
+            'kategori' => 'required|min:1|max:64',
+            'berat' => 'required|min:1|max:64',
+            'deskripsi' => 'required|min:1|max:64',
+        ]);
+        if($request->foto_produk){
+            $photo = $request->foto_produk;
+            $str = Str::random(8);
+            $getExt = $photo->getClientOriginalExtension();
+            $namafile = $str.'.'.$getExt;
+            $photo->move('foto_produk', $namafile);
+        }
+
+        $kategori_id = Kategori::where('jenis_kategori', $request->kategori)->pluck('id')->first();
+        Produk::create(array_merge($request->except(['foto_produk']) ,['kategori_id' => $kategori_id, 'foto_produk' => $namafile]));
        
     }
 
@@ -88,10 +109,33 @@ class ProdukController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        $kategori = Kategori::find($id);
-        $kategori->update($request->all());
-        return response()->json($kategori);
+    {   
+        $validatedData = $request->validate([
+            'nama_produk' => 'required|min:1|max:64',
+            'harga' => 'required|min:1|max:64',
+            'status' => 'required|min:1|max:64',
+            'kategori' => 'required|min:1|max:64',
+            'berat' => 'required|min:1|max:64',
+            'deskripsi' => 'required|min:1|max:64',
+        ]);
+        $update = Produk::find($id);
+        if($request->hasFile('foto_produk')){
+            $path = 'foto_produk/'.$update->foto_produk;
+            if(File::exists($path)){
+                File::delete($path);
+            }
+            $photo = $request->foto_produk;
+            $str = Str::random(8);
+            $getExt = $photo->getClientOriginalExtension();
+            $namafile = $str.'.'.$getExt;
+            $photo->move('foto_produk', $namafile);
+        } else {
+            $namafile = $update->foto_produk;
+        }
+        $id= $request->id_produk;
+        $produk = Produk::find($id);
+        $produk->update(array_merge($request->except(['foto_produk']) ,['foto_produk' => $namafile]));
+        return response()->json($produk);
     }
 
     /**
@@ -102,8 +146,20 @@ class ProdukController extends Controller
      */
     public function destroy($id)
     {
-        $kategori = Kategori::find($id);
-        $kategori->delete();
-        return response()->json($kategori);
+        $destroy = Produk::find($id);
+
+        if(!$destroy){
+            return response()->json($destroy);
+        }
+
+        if($destroy->foto_produk){
+            $path = 'foto_produk/'.$destroy->foto_produk;
+            if(File::exists($path)){
+                File::delete($path);
+            }
+        }
+
+        $destroy->delete();
+        return response()->json($destroy);
     }
 }

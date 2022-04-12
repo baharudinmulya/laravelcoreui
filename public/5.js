@@ -342,56 +342,70 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Transition", { attrs: { name: "modal" } }, [
-    _vm.show
-      ? _c("div", { staticClass: "modal-mask" }, [
-          _c("div", { staticClass: "modal-wrapper" }, [
-            _c("div", { staticClass: "modal-container" }, [
-              _c(
-                "div",
-                { staticClass: "modal-header" },
-                [_vm._t("header", [_vm._v("default header")])],
-                2
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "modal-body" },
-                [
-                  _vm._t("body", [
-                    _vm._v("\n          default body\n          ")
-                  ])
-                ],
-                2
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "modal-footer" },
-                [
-                  _vm._t("footer", [
-                    _vm._v("\n            default footer\n            "),
-                    _c(
-                      "button",
-                      {
-                        staticClass: "modal-default-button",
-                        on: {
-                          click: function($event) {
-                            return _vm.$emit("close")
+  return _c(
+    "Transition",
+    {
+      attrs: { name: "modal" },
+      on: {
+        click: function($event) {
+          if ($event.target !== $event.currentTarget) {
+            return null
+          }
+          return _vm.close($event)
+        }
+      }
+    },
+    [
+      _vm.show
+        ? _c("div", { staticClass: "modal-mask" }, [
+            _c("div", { staticClass: "modal-wrapper" }, [
+              _c("div", { staticClass: "modal-container" }, [
+                _c(
+                  "div",
+                  { staticClass: "modal-header" },
+                  [_vm._t("header", [_vm._v("default header")])],
+                  2
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "modal-body" },
+                  [
+                    _vm._t("body", [
+                      _vm._v("\n          default body\n          ")
+                    ])
+                  ],
+                  2
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "modal-footer" },
+                  [
+                    _vm._t("footer", [
+                      _vm._v("\n            default footer\n            "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "modal-default-button",
+                          on: {
+                            click: function($event) {
+                              return _vm.$emit("close")
+                            }
                           }
-                        }
-                      },
-                      [_vm._v("OK")]
-                    )
-                  ])
-                ],
-                2
-              )
+                        },
+                        [_vm._v("OK")]
+                      )
+                    ])
+                  ],
+                  2
+                )
+              ])
             ])
           ])
-        ])
-      : _vm._e()
-  ])
+        : _vm._e()
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
