@@ -33,10 +33,17 @@ Route::group(['middleware' => 'api'], function ($router) {
         Route::post('kategori/update/{id}', 'KategoriController@update')->name('kategori.update');
         Route::get('kategori/destroy/{id}', 'KategoriController@destroy')->name('kategori.destroy');
         Route::get('produk', 'ProdukController@index')->name('produk.index');
+        Route::get('produkselect1', 'PesananController@showSelectnamaproduk')->name('pesanan.showSelectnamaproduk');
+        Route::get('produkselect2', 'PesananController@showSelectnamapelanggan')->name('pesanan.showSelectnamapelanggan');
         Route::post('produk/store', 'ProdukController@store')->name('produk.store');
         Route::get('produk/show/{id}', 'ProdukController@show')->name('produk.show');
         Route::post('produk/update/{id}', 'ProdukController@update')->name('produk.update');
         Route::get('produk/destroy/{id}', 'ProdukController@destroy')->name('produk.destroy');
+        Route::get('pesanan', 'PesananController@index')->name('pesanan.index');
+        Route::post('pesanan/store', 'PesananController@store')->name('pesanan.store');
+        Route::get('pesanan/show/{id}', 'PesananController@show')->name('pesanan.show');
+        Route::post('pesanan/update/{id}', 'PesananController@update')->name('pesanan.update');
+        Route::get('pesanan/destroy/{id}', 'PesananController@destroy')->name('pesanan.destroy');
         // Route::resource('mail',        'MailController');
         // Route::get('prepareSend/{id}', 'MailController@prepareSend')->name('prepareSend');
         // Route::post('mailSend/{id}',   'MailController@send')->name('mailSend');

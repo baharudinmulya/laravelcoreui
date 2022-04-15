@@ -638,6 +638,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 
@@ -891,7 +893,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.modalhapus = false;
     },
     getBadge: function getBadge(success) {
-      return success === 'Active' ? 'success' : success === 'Inactive' ? 'secondary' : success === 'Pending' ? 'warning' : success === 'Draft' ? 'secondary' : success === 'Banned' ? 'danger' : 'primary';
+      return success === 'Rilis' ? 'success' : success === 'Inactive' ? 'secondary' : success === 'Pending' ? 'warning' : success === 'Draft' ? 'secondary' : success === 'Banned' ? 'danger' : 'primary';
     },
     search: lodash__WEBPACK_IMPORTED_MODULE_1___default.a.debounce(function (e) {
       //KIRIM EMIT DENGAN NAMA SEARCH DAN VALUE SESUAI YANG DIKETIKKAN OLEH USER
@@ -1641,7 +1643,7 @@ var render = function() {
                             _c(
                               "p",
                               [
-                                _vm._v("Kategori : "),
+                                _vm._v("Kategori : \n          "),
                                 _c(
                                   "CBadge",
                                   { staticClass: "badge badge-warning" },
