@@ -440,6 +440,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -521,7 +530,7 @@ __webpack_require__.r(__webpack_exports__);
       nama_pelanggan2: '',
       qty2: '',
       idpesanan2: '',
-      currentPage: 1,
+      currentPage: '',
       perPage: '',
       pageOptions: [5, 10, 15, {
         value: 100,
@@ -607,13 +616,20 @@ __webpack_require__.r(__webpack_exports__);
             }; //  console.log(this.items[i].status);
 
             _this.items[i]._cellVariants = _itemas;
-          } else if (_this.items[i].status == "batal") {
+          } else if (_this.items[i].status == "baru") {
             //   this.items[i]._cellVariants.status = 'success'
             var _itemas2 = {
-              status: 'danger'
+              status: 'info'
             }; //  console.log(this.items[i].status);
 
             _this.items[i]._cellVariants = _itemas2;
+          } else if (_this.items[i].status == "dikirim") {
+            //   this.items[i]._cellVariants.status = 'success'
+            var _itemas3 = {
+              status: 'primary'
+            }; //  console.log(this.items[i].status);
+
+            _this.items[i]._cellVariants = _itemas3;
           } //  console.log(this.items);
 
         }
@@ -666,6 +682,7 @@ __webpack_require__.r(__webpack_exports__);
       this.nama_produk2 = item.nama_produk;
       this.nama_pelanggan2 = item.nama_pelanggan;
       this.qty2 = item.qty;
+      this.status2 = item.status;
       this.idpesanan2 = item.invoice_id;
     },
     info: function info(item, index, button) {
@@ -682,6 +699,35 @@ __webpack_require__.r(__webpack_exports__);
       // Trigger pagination to update the number of buttons/pages due to filtering
       this.totalRows = filteredItems.length;
       this.currentPage = 1;
+    },
+    storeedit: function storeedit() {
+      var _this5 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post(this.$apiAdress + '/api/pesanan/update/' + this.idpesanan2 + '?token=' + localStorage.getItem("api_token"), {
+        nama_produk: this.nama_produk2,
+        nama_pelanggan: this.nama_pelanggan2,
+        qty: this.qty2,
+        status: this.status2,
+        invoice_id: this.idpesanan2
+      }).then(function (response) {
+        _this5.getPesanan();
+
+        _this5.showmodaledit = false;
+        _this5.nama_produk2 = '';
+        _this5.nama_pelanggan2 = '';
+        _this5.qty2 = '';
+        _this5.status2 = '';
+        _this5.idpesanan2 = '';
+        _this5.infoModal.title = 'Success';
+        _this5.infoModal.content = 'Data berhasil diubah';
+
+        _this5.showInfoModal();
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    },
+    showInfoModal: function showInfoModal() {
+      this.$root.$emit('bv::show::modal', this.infoModal.id);
     }
   }
 });
@@ -1776,6 +1822,78 @@ var render = function() {
                                     }
                                   }
                                 })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", [
+                                _c(
+                                  "label",
+                                  {
+                                    staticStyle: { "font-weight": "bold" },
+                                    attrs: { name: "9" }
+                                  },
+                                  [_vm._v("Status")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.status2,
+                                        expression: "status2"
+                                      }
+                                    ],
+                                    staticClass: "form-control",
+                                    attrs: {
+                                      name: "status2",
+                                      id: "status2",
+                                      required: ""
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        var $$selectedVal = Array.prototype.filter
+                                          .call($event.target.options, function(
+                                            o
+                                          ) {
+                                            return o.selected
+                                          })
+                                          .map(function(o) {
+                                            var val =
+                                              "_value" in o ? o._value : o.value
+                                            return val
+                                          })
+                                        _vm.status2 = $event.target.multiple
+                                          ? $$selectedVal
+                                          : $$selectedVal[0]
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("option", { attrs: { value: "baru" } }, [
+                                      _vm._v("Baru")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "option",
+                                      { attrs: { value: "proses" } },
+                                      [_vm._v("Proses")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "option",
+                                      { attrs: { value: "dikirim" } },
+                                      [_vm._v("Dikirim")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "option",
+                                      { attrs: { value: "selesai" } },
+                                      [_vm._v("Selesai")]
+                                    )
+                                  ]
+                                )
                               ])
                             ])
                           ],
@@ -1801,7 +1919,7 @@ var render = function() {
                     attrs: { color: "primary" },
                     on: {
                       click: function($event) {
-                        return _vm.store(_vm.idpesanan2)
+                        return _vm.storeedit(_vm.idpesanan2)
                       }
                     }
                   },

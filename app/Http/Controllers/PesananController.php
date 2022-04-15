@@ -59,7 +59,7 @@ class PesananController extends Controller
         $harga_produk = Produk::where('nama_produk', $request->nama_produk)->pluck('harga')->first();
         $total_harga = $harga_produk * $request->qty;
         $invoice = Carbon::now()->format('Ymdhis') .  $pelanggan_id .  $produk_id;
-        $status = "Proses";
+        $status = "baru";
         $pesanan = Pesanan::create([
             'invoice_id' => $invoice,
             'produk_id' => $produk_id,
@@ -104,7 +104,24 @@ class PesananController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pesanan = Pesanan::find($id);
+        $jumlahbarang = $request->qty;
+        $hargaproduk = Produk::where('nama_produk', $request->nama_produk)->pluck('harga')->first();
+        $total = $request->qty * $hargaproduk;
+        $produkid = Produk::where('nama_produk', $request->nama_produk)->pluck('id')->first();
+        $pelangganid = Pelanggan::where('nama_pelanggan', $request->nama_pelanggan)->pluck('id')->first();
+        $pesanan = Pesanan::updateorCreate([
+            'invoice_id' => $request->invoice_id,
+        ],
+        [
+            'produk_id' => $produkid,
+            'pelanggan_id' => $pelangganid,
+            'qty' => $request->qty,
+            'total_harga' => $total,
+            'status' => $request->status,
+            'date' => Carbon::now()->format('Y-m-d')
+        ]);
+        return response()->json($pesanan);
     }
 
     /**

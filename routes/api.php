@@ -33,6 +33,7 @@ Route::group(['middleware' => 'api'], function ($router) {
         Route::post('kategori/update/{id}', 'KategoriController@update')->name('kategori.update');
         Route::get('kategori/destroy/{id}', 'KategoriController@destroy')->name('kategori.destroy');
         Route::get('produk', 'ProdukController@index')->name('produk.index');
+        Route::post('produkexcel', 'ProdukController@excel')->name('produk.excel');
         Route::get('produkselect1', 'PesananController@showSelectnamaproduk')->name('pesanan.showSelectnamaproduk');
         Route::get('produkselect2', 'PesananController@showSelectnamapelanggan')->name('pesanan.showSelectnamapelanggan');
         Route::post('produk/store', 'ProdukController@store')->name('produk.store');
@@ -44,6 +45,12 @@ Route::group(['middleware' => 'api'], function ($router) {
         Route::get('pesanan/show/{id}', 'PesananController@show')->name('pesanan.show');
         Route::post('pesanan/update/{id}', 'PesananController@update')->name('pesanan.update');
         Route::get('pesanan/destroy/{id}', 'PesananController@destroy')->name('pesanan.destroy');
+
+        //getLaporan
+        Route::get('/laporan/getLaporan', 'LaporanController@index')->name('laporan.index');
+        
+
+
         // Route::resource('mail',        'MailController');
         // Route::get('prepareSend/{id}', 'MailController@prepareSend')->name('prepareSend');
         // Route::post('mailSend/{id}',   'MailController@send')->name('mailSend');
@@ -52,6 +59,15 @@ Route::group(['middleware' => 'api'], function ($router) {
 
         // Route::resource('users', 'UsersController')->except( ['create', 'store'] );
 
+        //ROUTE COUNT
+        Route::get('omset/keseluruhanomset', 'KeseluruhanomsetController@index')->name('keseluruhanomset.index');
+        Route::get('customer/customersa', 'KeseluruhanomsetController@customersa')->name('keseluruhanomset.customersa');
+        Route::get('kategori/kategoriproduk', 'KeseluruhanomsetController@kategoriproduk')->name('keseluruhanomset.kategoriproduk');
+        Route::get('kategori/jumlahproduk', 'KeseluruhanomsetController@jumlahproduk')->name('keseluruhanomset.jumlahproduk');
+        Route::get('order/orderbaru', 'KeseluruhanomsetController@orderbaru')->name('keseluruhanomset.orderbaru');
+        Route::get('order/orderproses', 'KeseluruhanomsetController@orderproses')->name('keseluruhanomset.orderproses');
+        Route::get('order/orderdikirim', 'KeseluruhanomsetController@orderdikirim')->name('keseluruhanomset.orderdikirim');
+        Route::get('order/orderselesai', 'KeseluruhanomsetController@orderselesai')->name('keseluruhanomset.orderselesai');
         Route::prefix('menu/menu')->group(function () { 
             Route::get('/',         'MenuEditController@index')->name('menu.menu.index');
             Route::get('/create',   'MenuEditController@create')->name('menu.menu.create');

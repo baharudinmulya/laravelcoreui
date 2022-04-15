@@ -6,6 +6,8 @@ use App\Models\Produk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use File;
+use App\Imports\ProdukImport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ProdukController extends Controller
 {
@@ -44,9 +46,10 @@ class ProdukController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function excel(Request $request)
     {
-        //
+        Excel::import(new ProdukImport,request()->file('file'));  
+        return back();
     }
 
     /**
@@ -55,8 +58,10 @@ class ProdukController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
+        dd($request);
         $validatedData = $request->validate([
             'nama_produk' => 'required|min:1|max:64',
             'harga' => 'required|min:1|max:64',

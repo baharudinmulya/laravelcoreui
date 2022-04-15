@@ -383,6 +383,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _base_Table_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../base/Table.vue */ "../coreui/src/views/base/Table.vue");
 /* harmony import */ var _users_UsersData__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../users/UsersData */ "../coreui/src/views/users/UsersData.js");
 /* harmony import */ var _layout_Modal_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../layout/Modal.vue */ "../coreui/src/views/layout/Modal.vue");
+/* harmony import */ var xlsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! xlsx */ "../coreui/node_modules/xlsx/xlsx.mjs");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 //
@@ -640,21 +641,57 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
+
+ // full import
+
+ // named imports
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CreateMenu',
   components: {
     CTableWrapper: _base_Table_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    Modal: _layout_Modal_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+    Modal: _layout_Modal_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    XLSX: xlsx__WEBPACK_IMPORTED_MODULE_5__,
+    read: xlsx__WEBPACK_IMPORTED_MODULE_5__["read"],
+    utils: xlsx__WEBPACK_IMPORTED_MODULE_5__["utils"],
+    writeFileXLSX: xlsx__WEBPACK_IMPORTED_MODULE_5__["writeFileXLSX"]
+  },
+  props: {
+    getExcelData: ''
   },
   data: function data() {
     var _ref;
 
     return _ref = {
+      excelData: {},
+      fileexcel: '',
+      showmassModal: false,
       file: '',
       kategori: null,
       editorData: '<p>Content of the editor.</p>',
@@ -892,8 +929,45 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
       this.modalhapus = false;
     },
+    excelExport: function excelExport(event) {
+      var _this4 = this;
+
+      var input = event.target;
+      var reader = new FileReader();
+
+      reader.onload = function () {
+        var fileData = reader.result;
+        var wb = xlsx__WEBPACK_IMPORTED_MODULE_5__["read"](fileData, {
+          type: 'binary'
+        });
+        wb.SheetNames.forEach(function (sheetName) {
+          var rowObj = xlsx__WEBPACK_IMPORTED_MODULE_5__["utils"].sheet_to_json(wb.Sheets[sheetName]);
+          _this4.excelData = JSON.stringify(rowObj);
+        });
+      };
+
+      reader.readAsBinaryString(input.files[0]);
+      console.log(this.excelData);
+    },
     getBadge: function getBadge(success) {
       return success === 'Rilis' ? 'success' : success === 'Inactive' ? 'secondary' : success === 'Pending' ? 'warning' : success === 'Draft' ? 'secondary' : success === 'Banned' ? 'danger' : 'primary';
+    },
+    showmassModale: function showmassModale() {
+      this.showmassModal = true;
+    },
+    simpanmassexcel: function simpanmassexcel() {
+      var formData = new FormData();
+      var file = this.fileexcel;
+      formData.append('file', this.file);
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(this.$apiAdress + "/api/produkexcel?token=" + localStorage.getItem("api_token"), formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }).then(function (response) {
+        console.log("working now");
+      })["catch"](function (error) {
+        console.log(error);
+      });
     },
     search: lodash__WEBPACK_IMPORTED_MODULE_1___default.a.debounce(function (e) {
       //KIRIM EMIT DENGAN NAMA SEARCH DAN VALUE SESUAI YANG DIKETIKKAN OLEH USER
@@ -1515,6 +1589,75 @@ var render = function() {
         ])
       }),
       _vm._v(" "),
+      _c("modal", {
+        attrs: { show: _vm.showmassModal, name: "modal1", id: "modal1" },
+        on: {
+          close: function($event) {
+            _vm.showmassModal = false
+          }
+        },
+        scopedSlots: _vm._u([
+          {
+            key: "header",
+            fn: function() {
+              return [_c("h3", [_vm._v("Mass Upload")])]
+            },
+            proxy: true
+          },
+          {
+            key: "body",
+            fn: function() {
+              return [
+                _c("div", [
+                  _c("input", {
+                    attrs: { type: "file", name: "fileexcel", id: "fileexcel" },
+                    on: {
+                      change: function($event) {
+                        return _vm.handleFileUpload($event)
+                      }
+                    }
+                  })
+                ])
+              ]
+            },
+            proxy: true
+          },
+          {
+            key: "footer",
+            fn: function() {
+              return [
+                _c(
+                  "CButton",
+                  {
+                    attrs: { color: "primary" },
+                    on: {
+                      click: function($event) {
+                        return _vm.simpanmassexcel()
+                      }
+                    }
+                  },
+                  [_vm._v("simpan")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "CButton",
+                  {
+                    attrs: { color: "danger" },
+                    on: {
+                      click: function($event) {
+                        _vm.showmassModal = false
+                      }
+                    }
+                  },
+                  [_vm._v("Batal")]
+                )
+              ]
+            },
+            proxy: true
+          }
+        ])
+      }),
+      _vm._v(" "),
       _c(
         "CCol",
         { attrs: { col: "12", lg: "12" } },
@@ -1557,9 +1700,18 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "form-inline" }, [
-                        _c("button", { staticClass: "btn btn-danger" }, [
-                          _vm._v("Mass Upload")
-                        ]),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-success",
+                            on: {
+                              click: function($event) {
+                                return _vm.showmassModale()
+                              }
+                            }
+                          },
+                          [_vm._v("Mass Upload")]
+                        ),
                         _vm._v(" \n               "),
                         _c(
                           "button",
