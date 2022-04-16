@@ -27,11 +27,14 @@ Route::group(['middleware' => 'api'], function ($router) {
     
     Route::group(['middleware' => 'admin'], function ($router) {
         
+        //KATEGORI
         Route::get('kategori', 'KategoriController@index')->name('kategori.index');
         Route::post('kategori/store', 'KategoriController@store')->name('kategori.store');
         Route::get('kategori/show/{id}', 'KategoriController@show')->name('kategori.show');
         Route::post('kategori/update/{id}', 'KategoriController@update')->name('kategori.update');
         Route::get('kategori/destroy/{id}', 'KategoriController@destroy')->name('kategori.destroy');
+
+        //PRODUK
         Route::get('produk', 'ProdukController@index')->name('produk.index');
         Route::post('produkexcel', 'ProdukController@excel')->name('produk.excel');
         Route::get('produkselect1', 'PesananController@showSelectnamaproduk')->name('pesanan.showSelectnamaproduk');
@@ -40,11 +43,19 @@ Route::group(['middleware' => 'api'], function ($router) {
         Route::get('produk/show/{id}', 'ProdukController@show')->name('produk.show');
         Route::post('produk/update/{id}', 'ProdukController@update')->name('produk.update');
         Route::get('produk/destroy/{id}', 'ProdukController@destroy')->name('produk.destroy');
+
+        //PESANAN
         Route::get('pesanan', 'PesananController@index')->name('pesanan.index');
         Route::post('pesanan/store', 'PesananController@store')->name('pesanan.store');
         Route::get('pesanan/show/{id}', 'PesananController@show')->name('pesanan.show');
         Route::post('pesanan/update/{id}', 'PesananController@update')->name('pesanan.update');
-        Route::get('pesanan/destroy/{id}', 'PesananController@destroy')->name('pesanan.destroy');
+        Route::post('pesanan/destroy/{id}', 'PesananController@destroy')->name('pesanan.destroy');
+
+        //PELANGGAN
+        Route::get('pelanggan', 'PelangganController@index')->name('pelanggan.index');
+        Route::post('pelanggan/store', 'PelangganController@store')->name('pelanggan.store');
+        Route::post('pelanggan/update/{id}', 'PelangganController@update')->name('pelanggan.update');
+        Route::post('pelanggan/delete/{id}', 'PelangganController@destroy')->name('pelanggan.destroy');
 
         //getLaporan
         Route::get('/laporan/getLaporan', 'LaporanController@index')->name('laporan.index');
@@ -68,6 +79,8 @@ Route::group(['middleware' => 'api'], function ($router) {
         Route::get('order/orderproses', 'KeseluruhanomsetController@orderproses')->name('keseluruhanomset.orderproses');
         Route::get('order/orderdikirim', 'KeseluruhanomsetController@orderdikirim')->name('keseluruhanomset.orderdikirim');
         Route::get('order/orderselesai', 'KeseluruhanomsetController@orderselesai')->name('keseluruhanomset.orderselesai');
+
+
         Route::prefix('menu/menu')->group(function () { 
             Route::get('/',         'MenuEditController@index')->name('menu.menu.index');
             Route::get('/create',   'MenuEditController@create')->name('menu.menu.create');

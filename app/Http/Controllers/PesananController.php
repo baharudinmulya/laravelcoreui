@@ -132,6 +132,8 @@ class PesananController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $invoice = Pesanan::where('invoice_id', $id)->first();
+        $invoice->delete();
+        return response()->json($invoice);
     }
 }
