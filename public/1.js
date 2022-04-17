@@ -2155,8 +2155,8 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(this.$apiAdress + '/api/omset/keseluruhanomset?token=' + localStorage.getItem('api_token')).then(function (response) {
         _this.keseluruhanomset = 'Rp. ' + Intl.NumberFormat(['ban', 'id']).format(response.data); // this.keseluruhanomset1 = this.format1(this.keseluruhanomset, 'Rp. ');
 
-        var dat1 = Intl.NumberFormat(['ban', 'id']).format(_this.keseluruhanomset);
-        console.log(dat1); // Select all elements with a 'data-flowering' attribute
+        var dat1 = Intl.NumberFormat(['ban', 'id']).format(_this.keseluruhanomset); // console.log(dat1);
+        // Select all elements with a 'data-flowering' attribute
       })["catch"](function (error) {
         console.log(error);
       });
@@ -2165,8 +2165,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(this.$apiAdress + '/api/customer/customersa?token=' + localStorage.getItem('api_token')).then(function (response) {
-        _this2.customersa = ' ' + response.data;
-        console.log(_this2.customersa);
+        _this2.customersa = ' ' + response.data; // console.log(this.customersa)
       })["catch"](function (error) {
         console.log(error);
       });
@@ -2175,8 +2174,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(this.$apiAdress + '/api/kategori/kategoriproduk?token=' + localStorage.getItem('api_token')).then(function (response) {
-        _this3.kategoriproduk = ' ' + response.data;
-        console.log(_this3.kategoriproduk);
+        _this3.kategoriproduk = ' ' + response.data; // console.log(this.kategoriproduk)
       })["catch"](function (error) {
         console.log(error);
       });
@@ -2185,8 +2183,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this4 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(this.$apiAdress + '/api/kategori/jumlahproduk?token=' + localStorage.getItem('api_token')).then(function (response) {
-        _this4.produk = ' ' + response.data;
-        console.log(_this4.produk);
+        _this4.produk = ' ' + response.data; // console.log(this.produk)
       })["catch"](function (error) {
         console.log(error);
       });
